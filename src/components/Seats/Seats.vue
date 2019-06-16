@@ -1,8 +1,11 @@
 <template>
-  <div></div>
+  <div>
+    <div class="seat"></div>
+  </div>
 </template>
 
 <script>
+
 export default {
   name: 'Seats',
   data () {
@@ -11,3 +14,13 @@ export default {
   }
 }
 </script>
+
+<style>
+  .seat {
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    display: inline-block;
+    padding-right: 10px;
+  }
+</style>
