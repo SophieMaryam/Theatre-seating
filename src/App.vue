@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <Mainhall />
-    <router-view/>
   </div>
 </template>
 
