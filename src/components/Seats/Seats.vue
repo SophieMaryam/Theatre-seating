@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="seat"></div>
+    <div class="seat" :data="data"></div>
   </div>
 </template>
 
@@ -8,6 +8,7 @@
 
 export default {
   name: 'Seats',
+  props: ['data'],
   data () {
     return {
     }
@@ -20,7 +21,8 @@ export default {
     width: 20px;
     height: 20px;
     background-color: green;
-    display: inline-block;
-    padding-right: 10px;
+    margin-right: 10px;
+    display: flex;
+    float: left;
   }
 </style>
