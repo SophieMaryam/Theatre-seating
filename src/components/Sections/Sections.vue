@@ -20,8 +20,6 @@ export default {
     return {
       sections: seatData.sections
     }
-  },
-  methods: {
   }
 }
 </script>
