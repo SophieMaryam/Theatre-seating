@@ -1,21 +1,15 @@
-// import Vue from 'vue'
-// import Router from 'vue-router'
-// import Mainhall from '../components/Mainhall/Mainhall';
-// import Seats from '../components/Seats/Seats';
+import Vue from 'vue'
+import Router from 'vue-router'
+import Sections from '../components/Sections/Sections'
 
-// Vue.use(Router)
+Vue.use(Router)
 
-// export default new Router({
-//   routes: [
-//     {
-//       path: '/',
-//       name: 'Mainhall',
-//       component: Mainhall
-//     },
-//     {
-//       path: '/',
-//       name: 'Seats',
-//       component: Seats
-//     }
-//   ]
-// })
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'Sections',
+      component: Sections
+    }
+  ]
+})
