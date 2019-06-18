@@ -20,6 +20,18 @@ export default {
   },
   methods: {
     reserved: function() {
+      for(let i = 0; i < this.groupData.length; i++) {
+        const seats = this.groupData[i].seats;
+        for(let i = 0; i < seats.length; i++) {
+          if(seats[i].section === this.$props.sectionName &&
+            seats[i].row === this.$props.row &&
+            seats[i].seat === this.$props.seat
+          ) {
+            return true
+          }
+        }
+      }
+      return false
     }
   }
 }
