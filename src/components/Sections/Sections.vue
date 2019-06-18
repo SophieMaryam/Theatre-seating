@@ -14,10 +14,14 @@ import Room from "../Room/Room";
 export default {
   name: 'Sections',
   components: {
+    Room
   },
   data () {
     return {
+      sections: seatData.sections
     }
+  },
+  methods: {
   }
 }
 </script>
