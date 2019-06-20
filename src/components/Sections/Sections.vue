@@ -1,7 +1,9 @@
  <template>
   <div>
     <div>
-      <Room v-for="section in sections" v-bind:key="section.name"
+      <Room 
+      v-for="section in sections" 
+      :key="section.name"
       :name="section.name"
       :rows="section.rows" />
     </div>
@@ -12,7 +14,7 @@ import seatData from "../../public/seats.js";
 import Room from "../Room/Room";
 
 export default {
-  name: 'Sections',
+  name: "Sections",
   components: {
     Room
   },
