@@ -2,8 +2,9 @@
   <div>
     <div>
       {{ name }}
-      <Row v-for="row in rows" 
-      v-bind:key="row.row"
+      <Row 
+      v-for="row in rows" 
+      :key="row.row"
       :row="row.row"
       :seats="row.seats"
       :sectionName="name" />
@@ -11,7 +12,6 @@
     <br/>
   </div>
 </template>
-
 <script>
 import Row from "../Row/Row";
 
