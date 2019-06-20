@@ -16,8 +16,8 @@
 import Row from "../Row/Row";
 
 export default {
-  name: 'Room',
-  props: ['name', 'rows'],
+  name: "Room",
+  props: ["name", "rows"],
   components: {
     Row
   }
