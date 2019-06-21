@@ -37,14 +37,14 @@ export default {
           if (seats[j].section === this.$props.sectionName &&
               seats[j].row === this.$props.row &&
               seats[j].seat === this.$props.seat) {
-                const obj= coloredIds.find(
+                const objectWeNeed = coloredIds.find(
                   object => object.id === groupData[i].id
                 )
-                return obj.color
+                return objectWeNeed.color
           }
         }
       }
-      return "green";
+      return "green"
     }
   }
 }
