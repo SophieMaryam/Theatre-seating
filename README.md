@@ -1,6 +1,6 @@
-# theatre-seating
+# Theatre-seating
 
-> A Vue.js project
+> A basic Vue.js project. Based more on vue functionality and use rather than design. 
 
 ## Build Setup
 
