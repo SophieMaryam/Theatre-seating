@@ -14,18 +14,18 @@ export default {
     }
   },
   methods: {
-    getIds() {
-      const groupId = this.groupData.map((data) => {
-        return data.id
-      });
+    getGroupId() {
+      const groupId = this.groupData.map((group) => group.id);
       return groupId
     },
     assignColorToId() {
-      const ids = this.getIds();
+      const ids = this.getGroupId();
       var colors = ["AliceBlue","AntiqueWhite","Aqua","Aquamarine","Azure","Beige","Bisque","Black","BlanchedAlmond","Blue","BlueViolet","Brown","BurlyWood","CadetBlue","Chartreuse","Chocolate", "red", "blue", "orange", "yellow"];
       let coloredIds = [];
       for(let i=0; i < ids.length ;i++) {
-        coloredIds.push({id: ids[i], color: colors[i]})
+        coloredIds.push({
+          id: ids[i], color: colors[i]
+        })
       }
       return coloredIds
     },
