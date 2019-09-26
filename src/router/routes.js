@@ -8,6 +8,11 @@ export default new Router({
   routes: [
     {
       path: "/",
+      name: "Home",
+      component: Home
+    },
+    {
+      path: "/theatre-seating",
       name: "Sections",
       component: Sections
     }
