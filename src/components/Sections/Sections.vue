@@ -10,7 +10,7 @@
   </div>
 </template>
 <script>
-import seatData from "../../public/seats.js";
+import seatData from "../../common/seats.js";
 import Room from "../Room/Room";
 
 export default {
