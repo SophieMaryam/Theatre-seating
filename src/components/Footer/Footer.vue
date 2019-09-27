@@ -64,15 +64,9 @@
 
 
 <script>
-import SocialMedia from "../SocialMedia/SocialMedia";
-
-export default {
-  name: "Footer",
-  components: {
-    SocialMedia
-  }
-}
+module.exports = require("./Footer.js");
 </script>
+
 
 <style>
   .bg-shade-black {

@@ -45,10 +45,9 @@
 </template>
 
 <script>
-export default {
-  name: "Navbar"  
-}
+module.exports = require("./Navbar.js");
 </script>
+
 
 <style scoped>
   .btn {

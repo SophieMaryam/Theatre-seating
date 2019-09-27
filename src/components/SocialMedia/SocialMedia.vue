@@ -28,7 +28,5 @@
 </template>
 
 <script>
-  export default {
-    name: "SocialMedia"
-  }
+module.exports = require("./SocialMedia.js");
 </script>
