@@ -60,7 +60,7 @@ export default {
     color: #ffffff;
   }
 
-  .nav-item:hover {
+  .nav-link:hover {
     color: #8B0000;
   }
 </style>
