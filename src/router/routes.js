@@ -5,17 +5,20 @@ import Sections from "../components/Sections/Sections";
 
 Vue.use(Router)
 
-export default new Router({
-  routes: [
-    {
-      path: "/",
-      name: "Home",
-      component: Home
-    },
-    {
-      path: "/theatre-seating",
-      name: "Sections",
-      component: Sections
-    }
-  ]
-})
+export const routes = [
+  {
+    path: "/",
+    name: "Home",
+    component: Home
+  },
+  {
+    path: "/theatre",
+    name: "Sections",
+    component: Sections
+  }
+]
+
+export const router = new Router({
+  mode: "history",
+  routes
+});
