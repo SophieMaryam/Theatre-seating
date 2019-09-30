@@ -1,9 +1,9 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand" href="#"> 
-          <i class="fas fa-place-of-worship"></i> Orius Theatre </a>
+          <font-awesome-icon icon="place-of-worship" class="orius" /> Orius Theatre </a>
           <button 
             class="navbar-toggler"
             type="button"
@@ -50,6 +50,7 @@ module.exports = require("./Navbar.js");
 
 
 <style scoped>
+
   .btn {
     border-color: #8B0000;
   }
@@ -57,6 +58,11 @@ module.exports = require("./Navbar.js");
   .btn:hover {
     background-color: #8B0000;
     color: #ffffff;
+  }
+
+  .navbar-brand,
+  .nav-link {
+    color: black;
   }
 
   .nav-link:hover {
