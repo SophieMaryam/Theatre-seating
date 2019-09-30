@@ -1,6 +1,7 @@
 <template>
   <div>
-    <Navbar />
+    <p>hi</p>
+    <!-- <Navbar />
     <div id="oriustheatre" class="view">
       <div class="container-fluid d-flex align-items-center justify-content-center h-100">
         <div class="row d-flex justify-content-center text-center white-text">
@@ -13,7 +14,7 @@
         </div> 
       </div>
     </div>
-    <section class="text-center pb-4 bg-shade-black">
+    <div class="text-center pb-4 bg-shade-black">
       <div class="container">
         <h2 class="mb-3 font-weight-bold text-white pt-4">Shows</h2>
         <div class="row">
@@ -43,7 +44,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
     <div class="bg-color">
       <h1 class="text-center text-white pt-5">Food and Drink</h1>
     </div>
@@ -58,17 +59,18 @@
       <p></p>
     </div>
     <div id="shop" class="image"></div>
-    <Footer />
+    <Footer /> -->
   </div>
 </template>
 
 <script>
-module.exports = require("./Home.js");
+ export default {
+  name: "Home"
+}
 </script>
 
 <style scoped>
-
-  #oriustheatre {
+  /* #oriustheatre {
     background: url("../../assets/theatre.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -81,14 +83,19 @@ module.exports = require("./Home.js");
     background-color: #1a1a1a;
   }
 
-  .theatre-show {
-    background-color: #8B0000;
-    height: 50px;
-  }
 
   .bg-color {
     background-color: #8B0000;
     height: 150px;
+  }
+
+   .bg-shade-black {
+    background-color: #1a1a1a;
+  }
+
+  .theatre-show {
+    background-color: #8B0000;
+    height: 50px;
   }
 
   #meals {
@@ -109,5 +116,5 @@ module.exports = require("./Home.js");
 
   #shop {
     background: url("../../assets/shop.jpg") no-repeat center center fixed;
-  }
+  } */
 </style>
