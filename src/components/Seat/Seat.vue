@@ -1,50 +1,64 @@
-<template>
-  <div class="seat" :style="{ backgroundColor: this.assignColorToSeat() }"></div>
-</template>
+<!-- <template>
+  <div class="seat" :style="{ backgroundColor: assignColorToSeat }"></div>
+</template>-->
 
-<script>
-import groupData from "../../public/groups.js";
+
+<!-- <script>
+import groupData from "../../common/groups.json";
 
 export default {
   name: "Seat",
   props: ["seat", "rank","sectionName", "row"],
   data () {
     return {
-      groupData: groupData
+      allGroupData: groupData.groups,
+      allSeats: [],
+      allGroupIds: [],
+      assignedIdsToColors: [],
+      allAssignedIds: [],
+    }
+  },
+  created() {
+      this.getAllSeats();
+      this.getGroupIds();
+      this.assignGroupIdToColor();
+  },
+  computed: {
+    assignColorToSeat() {
+      const selectedGroupSeats = this.allSeats.find(seatGroup => seatGroup);
+
+      const selectedSeat = selectedGroupSeats.map(seat => {
+       return (seat.section === this.$props.sectionName &&
+            seat.row === this.$props.row &&
+            seat.seat === this.$props.seat)
+      });
+
+      if (selectedSeat) {
+        const assignedSeat = this.assignedIdsToColors.find(coloredId => this.assignedIdsToColors.id === this.seat.id)
+        return assignedSeat.color
+      }
+      return "green"
     }
   },
   methods: {
-    getGroupId() {
-      const groupId = this.groupData.map((group) => group.id);
-      return groupId
+    getAllSeats() {
+      this.allSeats = this.allGroupData.map(group => group.seats);
     },
-    assignColorToId() {
-      const ids = this.getGroupId();
-      var colors = ["AliceBlue","AntiqueWhite","Aqua","Aquamarine","Azure","Beige","Bisque","Black","BlanchedAlmond","Blue","BlueViolet","Brown","BurlyWood","CadetBlue","Chartreuse","Chocolate", "red", "blue", "orange", "yellow"];
-      let coloredIds = [];
-      for(let i=0; i < ids.length ;i++) {
-        coloredIds.push({
-          id: ids[i], color: colors[i]
-        })
-      }
-      return coloredIds
+    getGroupIds() {
+      this.allGroupIds = this.allGroupData.map(group => group.id);
     },
-    assignColorToSeat() {
-        for (let i = 0; i < this.groupData.length; i++) {
-        const seats = this.groupData[i].seats;
-        const coloredIds = this.assignColorToId();
-        for (let j = 0; j < seats.length; j++) {
-          if (seats[j].section === this.$props.sectionName &&
-              seats[j].row === this.$props.row &&
-              seats[j].seat === this.$props.seat) {
-                const objectWeNeed = coloredIds.find(
-                  object => object.id === groupData[i].id
-                )
-                return objectWeNeed.color
-          }
+    assignGroupIdToColor() {
+      this.allGroupIds.forEach(id => {
+        const idNotAssignedColor = !(this.assignedIdsToColors.includes(id)) || this.assignedIdsToColors == "";
+        if (idNotAssignedColor) {
+          this.assignedIdsToColors.push({
+            id: id, color: this.getRandomColor()
+          })
         }
-      }
-      return "green"
+      });
+    },
+    getRandomColor() {
+      return "#"+((1<<24)*Math.random()|0).toString(16)
     }
   }
 }
@@ -58,4 +72,4 @@ export default {
     display: flex;
     float: left;
   }
-</style>
+</style> -->
