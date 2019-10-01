@@ -17,21 +17,21 @@
             class="collapse navbar-collapse" 
             id="navbarcontent text-center"
           >
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#"> What's On |
+            <ul class="navbar-nav ml-auto mr-auto">
+              <li class="nav-item">
+                <a class="nav-link text-uppercase font-weight-bold" href="#"> What's On
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"> About Orius | </a>
+                <a class="nav-link text-uppercase font-weight-bold" href="#"> About Orius </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Shop |
+                <a class="nav-link text-uppercase font-weight-bold" href="#">
+                  Shop
                 </a>
               </li>
               <li>
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link text-uppercase font-weight-bold" href="#">Contact</a>
               </li>
             </ul>
           <form class="form-inline">
@@ -76,9 +76,21 @@ export default {
     color: #ffffff;
   }
 
-  .navbar-brand,
+  .navbar-brand {
+    color: black;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
   .nav-link {
     color: black;
+    border-right: 1px solid black;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 15px;
   }
 
   .icons:hover,
