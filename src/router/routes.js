@@ -3,8 +3,9 @@ import Router from "vue-router";
 import Home from "../components/Home/Home";
 import Sections from "../components/Sections/Sections";
 import Login from "../components/Login/Login";
+import Register from "../components/Register/Register";
 
-Vue.use(Router)
+Vue.use(Router);
 
 export const routes = [
   {
@@ -16,6 +17,11 @@ export const routes = [
     path: "/theatre",
     name: "Sections",
     component: Sections
+  },
+  {
+    path: "/register",
+    name: "Register",
+    component: Register
   },
   {
     path: "/login",
