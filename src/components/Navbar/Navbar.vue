@@ -45,7 +45,9 @@
 </template>
 
 <script>
-module.exports = require("./Navbar.js");
+export default {
+  name: "Navbar"
+}
 </script>
 
 

@@ -10,10 +10,10 @@
               <i class="fab fa-facebook black-text mr-4"> </i>
           </a>
           <a class="tw-ic">
-              <i class="fab fa-twitter  black-text mr-4"> </i>
+              <i class="fab fa-twitter black-text mr-4"> </i>
           </a>
           <a class="gplus-ic">
-              <i class="fab fa-google-plus  black-text mr-4"> </i>
+              <i class="fab fa-google-plus black-text mr-4"> </i>
           </a>
           <a class="li-ic">
               <i class="fab fa-linkedin  black-text mr-4"> </i>
@@ -28,5 +28,10 @@
 </template>
 
 <script>
-module.exports = require("./SocialMedia.js");
+import Vue from "vue";
+
+export default Vue.extend({
+  name: "SocialMedia"
+});
+
 </script>
