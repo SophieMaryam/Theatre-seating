@@ -7,14 +7,14 @@ import BootstrapVue from "bootstrap-vue";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faPlaceOfWorship } from "@fortawesome/free-solid-svg-icons";
+import { faPlaceOfWorship, faSignInAlt, faSearch, faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 Vue.use(BootstrapVue);
 Vue.use(Vuex)
 Vue.config.productionTip = false
 
-library.add(faPlaceOfWorship);
+library.add(faPlaceOfWorship, faSignInAlt, faSearch, faShoppingBag);
 Vue.component("font-awesome-icon", FontAwesomeIcon)
 
 
