@@ -1,7 +1,7 @@
 <template>
   <div id="register">
     <div class="register-form">
-      <h1 class="text-center">Login</h1>
+      <h1 class="text-center">Register</h1>
       <form @submit.prevent="onSubmit">
         <div class="input">
           <label for="email">Mail</label>
