@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="#"> 
+        <a class="navbar-brand" href="/"> 
           <font-awesome-icon icon="place-of-worship" class="orius" /> Orius Theatre </a>
           <button 
             class="navbar-toggler"
@@ -34,9 +34,13 @@
                 <a class="nav-link" href="#">Contact</a>
               </li>
             </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn my-2 my-sm-0" type="submit">Search</button>
+          <form class="form-inline">
+            <input v-if="searchVisible" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <font-awesome-icon @click.prevent="search" icon="search" class="icons" />
+            <font-awesome-icon icon="shopping-bag" class="icons" />
+            <router-link to="/login">
+              <font-awesome-icon icon="sign-in-alt" class="icons" />
+            </router-link>
           </form>
         </div>
       </div>
@@ -46,7 +50,17 @@
 
 <script>
 export default {
-  name: "Navbar"
+  name: "Navbar",
+  data() {
+    return {
+      searchVisible: false
+    }
+  },
+  methods: {
+    search() {
+      this.searchVisible = !this.searchVisible;
+    }
+  }
 }
 </script>
 
@@ -67,8 +81,15 @@ export default {
     color: black;
   }
 
+  .icons:hover,
   .nav-link:hover {
     color: #8B0000;
+  }
+
+  .icons {
+    margin-left: 25px;
+    color: black;
+    cursor: pointer;
   }
 </style>
 
