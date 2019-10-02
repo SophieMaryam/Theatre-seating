@@ -19,8 +19,8 @@
           >
             <ul class="navbar-nav ml-auto mr-auto">
               <li class="nav-item">
-                <a class="nav-link text-uppercase font-weight-bold" href="#"> What's On
-                </a>
+                <router-link class="nav-link text-uppercase font-weight-bold" to="/tickets"> What's On
+                </router-link>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-uppercase font-weight-bold" href="#"> About Orius </a>
