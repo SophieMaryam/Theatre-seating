@@ -63,21 +63,10 @@
 </template>
 
 
-<script>
-import SocialMedia from "../SocialMedia/SocialMedia";
-
-export default {
-  name: "Footer",
-  components: {
-    SocialMedia
-  }
-}
+<script src="./Footer.js">
 </script>
 
 
-<style>
-  .bg-shade-black {
-    background-color: #1a1a1a;
-  }
+<style src="./Footer.css">
 </style>
 

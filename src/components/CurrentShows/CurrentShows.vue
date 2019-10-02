@@ -35,29 +35,10 @@
 </template>
 
 
-<script>
-export default {
-  name: "CurrentShows"
-}
+<script src="./CurrentShows.js">
 </script>
 
-<style scoped>
-  .check-btn {
-    background-color: #8B0000;
-    height: 50px;
-    border: #8B0000;
-    padding: 10px;
-    border-radius: 5%;
-  }
-
-  .check-btn:hover {
-    background-color: rgb(170, 2, 2);
-    border: rgb(170, 2, 2);
-  }
-
-  .bg-shade-black {
-    background-color: #1a1a1a;
-  }
+<style src="./CurrentShows.css">
 </style>
 
 

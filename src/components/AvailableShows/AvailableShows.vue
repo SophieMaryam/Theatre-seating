@@ -58,28 +58,8 @@
 </div>
 </template>
 
-<script>
-export default {
-  name: "CurrentShows"
-}
+<script src="./AvailableShows.js">
 </script>
 
-<style scoped>
-  .background {
-    background-color: #8B0000;
-  }
-
-  .image {
-    height: 150px;
-    width: 250px;
-  }
-
-  .btn {
-    background-color:#8B0000;
-  }
-
-   .btn:hover {
-    background-color: rgb(170, 2, 2);
-    border: rgb(170, 2, 2);
-  }
+<style src="./AvailableShows.css">
 </style>

@@ -48,61 +48,11 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "Navbar",
-  data() {
-    return {
-      searchVisible: false
-    }
-  },
-  methods: {
-    search() {
-      this.searchVisible = !this.searchVisible;
-    }
-  }
-}
+<script src="./Navbar.js">
 </script>
 
 
-<style scoped>
-
-  .btn {
-    border-color: #8B0000;
-  }
-
-  .btn:hover {
-    background-color: #8B0000;
-    color: #ffffff;
-  }
-
-  .navbar-brand {
-    color: black;
-  }
-
-  .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 20px;
-    padding-left: 20px;
-}
-
-  .nav-link {
-    color: black;
-    border-right: 1px solid black;
-    padding-top: 0;
-    padding-bottom: 0;
-    font-size: 15px;
-  }
-
-  .icons:hover,
-  .nav-link:hover {
-    color: #8B0000;
-  }
-
-  .icons {
-    margin-left: 25px;
-    color: black;
-    cursor: pointer;
-  }
+<style src="./Navbar.css">
 </style>
 
 

@@ -31,54 +31,8 @@
   </div>
 </template>
 
-<script>
-import CurrentShows from "../CurrentShows/CurrentShows";
-
-export default {
-  name: "Home",
-  components: {
-    CurrentShows
-  }
-}
+<script src="./Home.js">
 </script>
 
-<style scoped>
-  #oriustheatre {
-    background: url("../../assets/theatre.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 100vh;
-  }
-
-  .bg-color {
-    background-color: #8B0000;
-    height: 200px;
-  }
-
-   .bg-shade-black {
-    background-color: #1a1a1a;
-  }
-
-  #meals {
-    background: url("../../assets/food.jpg") no-repeat center center fixed;
-  }
-
-  .image {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 40vh;
-    box-shadow: 5px 10px #888888;
-  }
-
-  #history {
-    background: url("../../assets/history.jpg") no-repeat center center fixed;
-  }
-
-  #shop {
-    background: url("../../assets/shop.jpg") no-repeat center center fixed;
-  }
+<style src="./Home.css">
 </style>
