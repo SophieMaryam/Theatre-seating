@@ -2,7 +2,7 @@
   <div class="page-footer font-small">
     <SocialMedia />
     <div class="bg-shade-black text-white">
-      <div class="container pt-5 mb-4 text-center text-md-left">
+      <div class="container-fluid pt-5 mb-4 text-center text-md-left">
         <div class="row mt-3">
           <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
             <h6 class="text-uppercase font-weight-bold">
