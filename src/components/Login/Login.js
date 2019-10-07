@@ -1,4 +1,5 @@
 import Vue from "vue";
+import firebase from "firebase";
 
 export default {
   name: "Login",
@@ -10,11 +11,11 @@ export default {
   },
   methods: {
     onSubmit () {
-      const formData = {
-        email: this.email,
-        password: this.password,
-      }
-      console.log(formData)
+      firebase.auth().signInWithEmailAndPassword(this.email, this.password)
+      .then(user => { 
+        this.$router.replace("profile")
+      })
+      .catch(err => console.log(err));
     }
   }
 }
