@@ -1,8 +1,12 @@
 import Vue from "vue";
 import firebase from "firebase";
+import LoginSocialMedia from "../LoginSocialMedia/LoginSocialMedia.vue";
 
 export default {
   name: "Login",
+  components: {
+    LoginSocialMedia
+  },
   data () {
     return {
       email: "",
@@ -10,9 +14,18 @@ export default {
     }
   },
   methods: {
-    onSubmit () {
+    login() {
       firebase.auth().signInWithEmailAndPassword(this.email, this.password)
       .then(user => { 
+        this.$router.replace("profile")
+      })
+      .catch(err => console.log(err));
+    },
+    socialLoginIn() {
+      const provider = new firebase.auth.GoogleAuthProvider();
+
+      firebase.auth().signInWithPopup(provider)
+      .then((result) => {
         this.$router.replace("profile")
       })
       .catch(err => console.log(err));
