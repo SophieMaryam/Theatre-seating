@@ -1,10 +1,10 @@
 <template>
   <div id="login">
-    <div class="login-form">
-      <h1 class="text-center">Login</h1>
-      <form @submit.prevent="onSubmit">
+    <div class="login-form pb-5">
+      <h1 class="text-center text-uppercase font-weight-bold mt-3 mb-4">Sign in with email</h1>
+      <form @submit.prevent="login" class="pl-5 pr-5">
         <div class="input">
-          <label for="email">Mail</label>
+          <label for="email" class="text-uppercase font-weight-bold">Mail:</label>
           <input
             type="email"
             id="email"
@@ -12,7 +12,7 @@
           >
         </div>
         <div class="input">
-          <label for="password">Password</label>
+          <label for="password" class="text-uppercase font-weight-bold">Password:</label>
           <input
             type="password"
             id="password"
@@ -23,7 +23,9 @@
           <button type="submit">Submit</button>
         </div>
       </form>
-      <div class="pt-2 text-center">
+      <hr class="hr-text mt-4 mb-4" data-content="OR">
+      <LoginSocialMedia :onClick="socialLoginIn" />
+      <div class="mt-3 text-center">
         Not a user? Register
         <router-link to="/register">here</router-link>
       </div>
