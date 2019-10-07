@@ -1,8 +1,12 @@
 import Vue from "vue";
 import firebase from "firebase";
+import LoginSocialMedia from "../LoginSocialMedia/LoginSocialMedia.vue";
 
 export default Vue.extend({
   name: "Register",
+  components: {
+    LoginSocialMedia
+  },
   data () {
     return {
       email: "",
@@ -12,7 +16,7 @@ export default Vue.extend({
     }
   },
   methods: {
-    onSubmit () {
+    onSubmit() {
       firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(user => {
         this.$router.replace("profile")
       })

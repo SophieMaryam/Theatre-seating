@@ -1,8 +1,14 @@
 <template>
   <div id="register">
     <div class="register-form">
-      <h1 class="text-center">Register</h1>
-      <form @submit.prevent="onSubmit">
+      <div>
+        <h4 class="text-uppercase text-center">Sign Up With...</h4>
+        <p class="pl-5 pr-5 text-center">Signing up with social is super quick. No extra passwords to remember - no brain fail.</p>
+        <LoginSocialMedia />
+      </div>
+      <hr class="hr-text mt-4 mb-4" data-content="OR">
+      <h4 class="text-center text-uppercase mt-4">Sign Up using your email address</h4>
+      <form @submit.prevent="onSubmit" class="pl-5 pr-5">
         <div class="input">
           <label for="email">Mail</label>
           <input
