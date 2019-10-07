@@ -6,6 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 /test/unit/coverage/
 .env
+/src/common/config.js
 
 # Editor directories and files
 .idea
