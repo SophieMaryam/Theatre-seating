@@ -27,5 +27,6 @@
   </div>
 </template>
 
-<script src="./SocialMedia.js">
+<script>
+module.exports = require("./SocialMedia.js");
 </script>

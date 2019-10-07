@@ -63,7 +63,8 @@
 </template>
 
 
-<script src="./Footer.js">
+<script>
+  module.exports = require("./Footer.js");
 </script>
 
 

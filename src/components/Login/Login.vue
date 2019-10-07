@@ -31,7 +31,8 @@
   </div>
 </template>
 
-<script src="./Login.js">
+<script>
+  module.exports = require("./Login.js");
 </script>
 
 <style src="./Login.css">

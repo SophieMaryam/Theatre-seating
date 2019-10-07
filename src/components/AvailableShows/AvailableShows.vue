@@ -58,7 +58,8 @@
 </div>
 </template>
 
-<script src="./AvailableShows.js">
+<script>
+  module.exports = require("./AvailableShows.js");
 </script>
 
 <style src="./AvailableShows.css">

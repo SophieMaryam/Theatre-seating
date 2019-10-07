@@ -35,7 +35,8 @@
 </template>
 
 
-<script src="./CurrentShows.js">
+<script>
+  module.exports = require("./CurrentShows.js");
 </script>
 
 <style src="./CurrentShows.css">

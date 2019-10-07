@@ -31,7 +31,8 @@
   </div>
 </template>
 
-<script src="./Home.js">
+<script>
+  module.exports = require("./Home.js"); 
 </script>
 
 <style src="./Home.css">

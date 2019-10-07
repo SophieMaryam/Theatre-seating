@@ -48,7 +48,8 @@
   </div>
 </template>
 
-<script src="./Navbar.js">
+<script>
+  module.exports = require("./Navbar.js"); 
 </script>
 
 

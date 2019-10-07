@@ -1,10 +1,10 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "../components/Home/Home";
-import Sections from "../components/Sections/Sections";
-import Login from "../components/Login/Login";
-import Register from "../components/Register/Register";
-import AvailableShows from "../components/AvailableShows/AvailableShows";
+import Home from "../components/Home/Home.vue";
+import Sections from "../components/Sections/Sections.vue";
+import Login from "../components/Login/Login.vue";
+import Register from "../components/Register/Register.vue";
+import AvailableShows from "../components/AvailableShows/AvailableShows.vue";
 
 Vue.use(Router);
 
