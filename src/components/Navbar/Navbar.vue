@@ -2,9 +2,9 @@
   <div>
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="/"> 
+        <router-link class="navbar-brand" to="/"> 
           <font-awesome-icon icon="place-of-worship" class="orius" /> Orius Theatre 
-        </a>
+        </router-link>
         <button 
           class="navbar-toggler"
           type="button"
@@ -64,11 +64,11 @@
   </div>
 </template>
 
-<style scoped src="./Navbar.css">
-</style>
-
 <script>
   module.exports = require("./Navbar.js"); 
 </script>
+
+<style scoped src="./Navbar.css">
+</style>
 
 
