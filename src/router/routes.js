@@ -8,6 +8,7 @@ import Login from "../components/Login/Login.vue";
 import Register from "../components/Register/Register.vue";
 import AvailableShows from "../components/AvailableShows/AvailableShows.vue";
 import Profile from "../views/Profile/Profile.vue";
+import Contact from "../views/Contact/Contact.vue";
 
 Vue.use(Router);
 
@@ -44,6 +45,11 @@ export const routes = [
     path: "/tickets",
     name: "AvailableShows",
     component: AvailableShows
+  },
+  {
+    path: "/Contact",
+    name: "Contact",
+    component: Contact
   },
   {
     path: "/profile",
