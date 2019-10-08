@@ -23,15 +23,15 @@
               </router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-uppercase font-weight-bold" href="#"> About Orius </a>
+              <router-link class="nav-link text-uppercase font-weight-bold" to="#"> About Orius </router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-uppercase font-weight-bold" href="#">
+              <router-link class="nav-link text-uppercase font-weight-bold" to="#">
                 Shop
-              </a>
+              </router-link>
             </li>
             <li>
-              <a class="nav-link text-uppercase font-weight-bold" href="#">Contact</a>
+              <router-link class="nav-link text-uppercase font-weight-bold" to="/Contact">Contact</router-link>
             </li>
           </ul>
           <form class="form-inline">
@@ -43,17 +43,17 @@
                 <font-awesome-icon class="icons" icon="sign-in-alt" />
               </template>
               <b-dropdown-item class="dropdown">
-                <router-link to="/login" class="link">Login
+                <router-link to="/login" class="link"> Login
                 </router-link>
               </b-dropdown-item>
               <b-dropdown-divider></b-dropdown-divider>
               <b-dropdown-item>
-                <router-link to="/register" class="link">Registeration
+                <router-link to="/register" class="link"> Registeration
                 </router-link>
               </b-dropdown-item>
               <b-dropdown-divider></b-dropdown-divider>
               <b-dropdown-item>
-                <router-link to="/profile" class="link">My Account
+                <router-link to="/profile" class="link"> My Account
                 </router-link>
               </b-dropdown-item>
             </b-dropdown>
@@ -64,12 +64,11 @@
   </div>
 </template>
 
+<style scoped src="./Navbar.css">
+</style>
+
 <script>
   module.exports = require("./Navbar.js"); 
 </script>
-
-
-<style src="./Navbar.css">
-</style>
 
 
