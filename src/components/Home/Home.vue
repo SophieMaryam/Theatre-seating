@@ -15,19 +15,20 @@
     <CurrentShows />
     <div class="bg-color">
       <h1 class="text-center text-white pt-5">Food and Drink</h1>
-      <p class="text-center text-white">Orius has a restaurant and cafe, open two hours before the start of any show. <a href=""> Check out more </a></p>
+      <p class="text-center text-white">Orius has a restaurant and cafe, open two hours before the start of any show. <router-link to="/"> Check out more </router-link></p>
     </div>
     <div id="meals" class="image"></div>
     <div class="bg-color">
       <h1 class="text-center text-white pt-5">Our History</h1>
-      <p class="text-center text-white"> Discover more about Orius's history since it's opening in 1901. <a href=""> Explore more of our history. </a></p>
+      <p class="text-center text-white"> Discover more about Orius's history since it's opening in 1901. <router-link to="/"> Explore more of our history. </router-link></p>
     </div>
     <div id="history" class="image"></div>
     <div class="bg-color">
       <h1 class="text-center text-white pt-5">Shop</h1>
-      <p class="text-center text-white"> Browse our range of retail products. <a href=""> Browse options. </a></p>
+      <p class="text-center text-white"> Browse our range of retail products. <router-link to="/"> Browse options. </router-link></p>
     </div>
-    <div id="shop" class="image"></div>
+    <div id="shop" class="image">
+    </div>
   </div>
 </template>
 
