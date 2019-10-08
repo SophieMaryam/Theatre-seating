@@ -1,12 +1,31 @@
+.caret-off::before {
+  display: none;
+}
+.caret-off::after {
+  display: none;
+}
+
 .btn {
-  border-color: #8B0000;
+  background-color: white;
+  border: none;
 }
 
 .btn:hover {
-  background-color: #8B0000;
-  color: #ffffff;
+  background-color: white;
+  border: none;
 }
 
+.dropdown-item.active, .dropdown-item:active {
+  background-color: white
+}
+
+.show > .btn-secondary.dropdown-toggle {
+  background-color: white;
+  border: none;
+}
+
+
+.link,
 .navbar-brand {
   color: black;
 }
@@ -24,9 +43,11 @@
   font-size: 15px;
 }
 
+.link:hover,
 .icons:hover,
 .nav-link:hover {
   color: #8B0000;
+  text-decoration: none;
 }
 
 .icons {
