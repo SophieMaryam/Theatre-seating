@@ -1,7 +1,13 @@
 <template>
   <div>
-    <h1>Profile</h1>
     <button @click="logout">Sign Out</button>
+    <b-tabs content-class="mt-3">
+      <b-tab title="Profile" active><UserProfileDetails /></b-tab>
+      <b-tab title="My Tickets"><p>I'm the second tab</p></b-tab>
+      <b-tab title="Settings">
+        <Settings />
+      </b-tab>
+    </b-tabs>
   </div>
 </template>
 
@@ -9,5 +15,5 @@
 module.exports = require("./Profile.js");
 </script>
 
-<!-- <style src="./Profile.css">
-</style> -->
+<style src="./Profile.css">
+</style> 
