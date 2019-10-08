@@ -47,9 +47,9 @@
   </div>
 </template>
 
-<script>
-module.exports = require("./Register.js");
-</script>
-
-<style src="./Register.css">
+<style scoped src="./Register.css">
 </style>
+
+<script>
+  module.exports = require("./Register.js");
+</script>

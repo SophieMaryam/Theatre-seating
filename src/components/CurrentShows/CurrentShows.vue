@@ -34,12 +34,11 @@
   </div>
 </template>
 
+<style scoped src="./CurrentShows.css">
+</style>
 
 <script>
   module.exports = require("./CurrentShows.js");
 </script>
-
-<style src="./CurrentShows.css">
-</style>
 
 

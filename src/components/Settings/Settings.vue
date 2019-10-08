@@ -34,12 +34,10 @@
   </div>
 </template>
 
+<style scoped src="./Settings.css">
+</style>
+
 <script>
   module.exports = require("./Settings.js");
 </script>
-
-
-<style src="./Settings.css">
-</style>
-
 

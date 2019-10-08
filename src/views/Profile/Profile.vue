@@ -11,9 +11,10 @@
   </div>
 </template>
 
+<style scoped src="./Profile.css">
+</style> 
+
 <script>
 module.exports = require("./Profile.js");
 </script>
 
-<style src="./Profile.css">
-</style> 

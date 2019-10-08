@@ -62,12 +62,10 @@
   </div>
 </template>
 
+<style src="./Footer.css">
+</style>
 
 <script>
   module.exports = require("./Footer.js");
 </script>
-
-
-<style src="./Footer.css">
-</style>
 

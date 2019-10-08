@@ -27,6 +27,6 @@
   </div>
 </template>
 
-<script>
+<script scoped>
 module.exports = require("./SocialMedia.js");
 </script>

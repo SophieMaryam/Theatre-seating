@@ -31,9 +31,9 @@
   </div>
 </template>
 
+<style scoped src="./Home.css">
+</style>
+
 <script>
   module.exports = require("./Home.js"); 
 </script>
-
-<style src="./Home.css">
-</style>
