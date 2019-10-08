@@ -1,9 +1,9 @@
-<!-- <template>
+<template>
   <div class="seat" :style="{ backgroundColor: assignColorToSeat }"></div>
-</template>-->
+</template>
 
 
-<!-- <script>
+<script>
 import groupData from "../../common/groups.json";
 
 export default {
@@ -72,4 +72,4 @@ export default {
     display: flex;
     float: left;
   }
-</style> -->
+</style>
