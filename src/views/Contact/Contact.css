@@ -1,15 +1,15 @@
 .background {
   background: #8B0000;
+  height: 100px;
 }
 .contact {
   padding: 4%;
 }
 .image-col {
-  background: #8B0000;
+  background: black;
   padding: 4%;
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
-  background-image: url("../../assets/acting.jpg");
 }
 .contact-info {
   margin-top:10%;
