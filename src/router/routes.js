@@ -73,7 +73,7 @@ router.beforeEach((to, from, next) => {
   if (requiresAuth && !currentUser) {
     next("login");
   }
-  // else if (!requiresAuth && currentUser) {
+  // else if (requiresAuth && currentUser) {
   //   next("profile");
   // }
   else {
