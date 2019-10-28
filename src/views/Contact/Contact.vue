@@ -1,5 +1,15 @@
 <template>
-  <div class="background">
+  <div class="">
+    <div class="col-12 container-fluid background">
+      <h1>Contact us</h1>
+    </div>
+    <div class="container">
+      <p>
+        Our mission is to give you unforgettable memories of fantastic experiences. We want to hear your feedback – whether complaint or congratulation – so that we can continue to improve your experience of the Hall and recognise members of staff who give exceptional service.
+
+        Please contact us using the form below, or through our social media channels, to let us know what you think. Information noted on this form will be processed in accordance with our Privacy Notice, here.
+      </p>
+    </div>
     <div class="container contact">
       <div class="row">
         <div class="col-md-3 image-col">
