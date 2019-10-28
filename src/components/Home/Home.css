@@ -16,17 +16,18 @@
   background-color: #1a1a1a;
 }
 
-#meals {
-  background: url("../../assets/food.jpg") no-repeat center center fixed;
-}
-
 .image {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 40vh;
-  box-shadow: 5px 10px #888888;
+  margin:auto;
+  padding:0;
+  height: 45vh;
+}
+
+#meals {
+  background: url("../../assets/food.jpg") no-repeat center fixed;
 }
 
 #history {
