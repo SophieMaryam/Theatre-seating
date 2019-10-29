@@ -2,7 +2,7 @@
   <div id="register">
     <div class="register-form">
       <div>
-        <h4 class="text-uppercase text-center">Sign Up With...</h4>
+        <h4 class="text-uppercase text-center mt-4">Sign Up With...</h4>
         <p class="pl-5 pr-5 text-center">Signing up with social is super quick. No extra passwords to remember - no brain fail.</p>
         <LoginSocialMedia />
       </div>
