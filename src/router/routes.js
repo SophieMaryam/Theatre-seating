@@ -6,9 +6,10 @@ import Home from "../components/Home/Home.vue";
 import Sections from "../components/Sections/Sections.vue";
 import Login from "../components/Login/Login.vue";
 import Register from "../components/Register/Register.vue";
-import AvailableShows from "../components/AvailableShows/AvailableShows.vue";
+import FilterAvailableShows from "../components/FilterAvailableShows/FilterAvailableShows.vue";
 import Profile from "../views/Profile/Profile.vue";
 import Contact from "../views/Contact/Contact.vue";
+import SelectedShow from "../components/SelectedShow/SelectedShow.vue";
 
 Vue.use(Router);
 
@@ -43,8 +44,8 @@ export const routes = [
   },
   {
     path: "/tickets",
-    name: "AvailableShows",
-    component: AvailableShows
+    name: "FilterAvailableShows",
+    component: FilterAvailableShows
   },
   {
     path: "/Contact",
@@ -59,6 +60,11 @@ export const routes = [
       requiresAuth: true
     }
   },
+  {
+    path: "/SelectedShow/:title",
+    name: "SelectedShow",
+    component: SelectedShow
+  }
 ]
 
 export const router = new Router({
