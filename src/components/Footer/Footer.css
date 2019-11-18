@@ -1,3 +1,7 @@
-.bg-shade-black {
-  background-color: #8B0000;
+.footer-hr {
+  border-top: 3px double #8c8b8b;
+}
+
+.useful-links {
+  list-style-type: none;
 }
