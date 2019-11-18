@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div class="col-12 container-fluid background">
-      <h1>Contact us</h1>
+      <h1 class="text-white text-center pt-3">Contact us</h1>
     </div>
     <div class="container">
       <p>
