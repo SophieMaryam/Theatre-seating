@@ -1,0 +1,25 @@
+.background {
+  background-color: #D3D3D3;
+}
+
+.image {
+  height: 150px;
+  width: 250px;
+}
+
+.btn {
+  background-color: #ffffff;
+  height: 50px;
+  width: 150px;
+  text-align: center;
+  float: right;
+}
+
+ .btn:hover {
+  background-color: rgb(170, 2, 2);
+  border: rgb(170, 2, 2);
+}
+
+.title {
+  color: #8B0000;
+}
