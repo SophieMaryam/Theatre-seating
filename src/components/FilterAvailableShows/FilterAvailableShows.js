@@ -1,48 +1,39 @@
 import Vue from "vue";
 
-class Post {
-  constructor(title, date, location, img) {
-    this.title = title;
-    this.date = date;
-    this.location = location;
-    this.img = img;
-  }
-}
-
 export default Vue.extend({
   name: "CurrentShows",
   data() {
     return {
       search: "",
       availableShowsList: [
-        new Post(
-          'Swan Lake', 
-          'Tuesday 15th - Wednesday 31st December 2019', 
-          'Auditorium',
-          "swanlake.jpg"
+        {
+          title: 'Swan Lake', 
+          date: 'Tuesday 15th - Wednesday 31st December 2019', 
+          location: 'Auditorium',
+          img: require("../../assets/swanlake.jpg")
 
-        ),
-        new Post(
-          "Drummers", 
-          'Friday 15th - Wednesday 20th November 2019', 
-          'Room II',
-          "../../assets/dance.jpg"
+        },
+        {
+          title: "Drummers", 
+          date: 'Friday 15th - Wednesday 20th November 2019', 
+          location: 'Room II',
+          img: require("../../assets/dance.jpg")
 
-        ),
-        new Post(
-          "Symphony II", 
-          'Tuesday 5th - Wednesday 10th December 2019', 
-          'Auditorium',
-          "../../assets/band.jpg"
+        },
+        {
+          title: "Symphony II", 
+          date: 'Tuesday 5th - Wednesday 10th December 2019', 
+          location: 'Auditorium',
+          img: require("../../assets/band.jpg")
 
-        ),
-        new Post(
-          "Behind Closed Curtains", 
-          'Tuesday 1 - Wednesday 10 January 2020', 
-          'Room I',
-          "../../assets/acting.jpg"
+        },
+        {
+          title: "Behind Closed Curtains", 
+          date: 'Tuesday 1 - Wednesday 10 January 2020', 
+          location: 'Room I',
+          img: require("../../assets/acting.jpg")
 
-        )
+        }
       ]
     }
   },
@@ -54,11 +45,10 @@ export default Vue.extend({
     }
   },
   methods: {
-    selectedShow(title) {
+    selectedShow(show, index) {
       this.$router.replace({ 
         name: "SelectedShow", 
-        params: { title: title }, 
-        query: { show: title } 
+        params: { title: show.title, date: show.date, location: show.location, img: show.img, index: index}
       });
     }
   }
