@@ -22,7 +22,10 @@ export const routes = [
   {
     path: "/theatre",
     name: "Sections",
-    component: Sections
+    component: Sections,
+    meta: {
+      requiresAuth: true
+    }
   },
   {
     path: "/register",
@@ -61,7 +64,7 @@ export const routes = [
     }
   },
   {
-    path: "/SelectedShow/:title",
+    path: "/shows/:title",
     name: "SelectedShow",
     component: SelectedShow
   }
