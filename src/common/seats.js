@@ -1,9 +1,11 @@
 var layout = {
-  ranks: [ "rank1", "rank2", "rank3" ],
+  ranks: ["rank1", "rank2", "rank3"],
   sections: [
-    { name: "main hall",
+    {
+      name: "main hall",
       rows: [
-        { row: "1",
+        {
+          row: "1",
           seats: [
             { seat: "1", rank: "rank1" },
             { seat: "3", rank: "rank1" },
@@ -11,7 +13,8 @@ var layout = {
             { seat: "2", rank: "rank1" }
           ]
         },
-        { row: "2",
+        {
+          row: "2",
           seats: [
             { seat: "1", rank: "rank1" },
             { seat: "3", rank: "rank1" },
@@ -21,7 +24,8 @@ var layout = {
             { seat: "2", rank: "rank1" }
           ]
         },
-        { row: "3",
+        {
+          row: "3",
           seats: [
             { seat: "1", rank: "rank2" },
             { seat: "3", rank: "rank2" },
@@ -33,15 +37,41 @@ var layout = {
         }
       ]
     },
-    { name: "1st balcony",
-      rows: [ { row: "1",
+    {
+      name: "1st balcony",
+      rows: [{
+        row: "1",
         seats: [
           { seat: "1", rank: "rank1" },
           { seat: "3", rank: "rank1" },
           { seat: "4", rank: "rank1" },
           { seat: "2", rank: "rank1" }
         ]
-      } ]
+      }]
+    },
+    {
+      name: "2nd balcony",
+      rows: [{
+        row: "1",
+        seats: [
+          { seat: "1", rank: "rank1" },
+          { seat: "3", rank: "rank1" },
+          { seat: "4", rank: "rank2" },
+          { seat: "2", rank: "rank2" }
+        ]
+      }]
+    },
+    {
+      name: "3rd balcony",
+      rows: [{
+        row: "1",
+        seats: [
+          { seat: "1", rank: "rank1" },
+          { seat: "3", rank: "rank1" },
+          { seat: "4", rank: "rank1" },
+          { seat: "2", rank: "rank1" }
+        ]
+      }]
     }
   ]
 }
