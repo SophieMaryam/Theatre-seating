@@ -1,1 +1,27 @@
-table tr:nth-of-type(2) {background: blue;}
+/* table tr:nth-of-type(2) {background: blue;} */
+
+.image1 {
+	background-repeat:no-repeat;
+	background-size:cover;
+	height:500px;
+    width:100%;
+    z-index: 2;
+    background-position: center;
+    overflow: hidden;
+}
+
+.tha {
+    position: relative;
+    z-index: 1;
+    margin-top: -251px;
+}
+
+#more {display: none;}
+
+#btn {
+    padding: 0;
+    border: none;
+    background: none;
+    color: #8B0000;
+}
+
