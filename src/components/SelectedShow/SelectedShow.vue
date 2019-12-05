@@ -35,7 +35,7 @@
               <td>{{details.time}}</td>
               <td>{{details.cost}}</td>
               <td>
-                <button @click="onLinkClicked()">Buy Ticket</button>
+                <button @click="onLinkClicked(details.id, showName)">Buy Ticket</button>
               </td>
             </tr>
           </tbody>
