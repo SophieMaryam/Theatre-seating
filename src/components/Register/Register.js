@@ -20,7 +20,10 @@ export default Vue.extend({
       firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(user => {
         this.$router.replace("profile")
       })
-      .catch(error => console.log(error))
+      .catch(error => {
+        alert(error)
+        console.log(error)
+      })
     }
   }
 });
