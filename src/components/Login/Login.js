@@ -17,7 +17,7 @@ export default {
     login() {
       firebase.auth().signInWithEmailAndPassword(this.email, this.password)
       .then(user => { 
-        this.$router.replace("profile")
+        this.$router.push(this.$route.query.redirect || '/profile')
       })
       .catch(err => console.log(err));
     },
@@ -26,7 +26,7 @@ export default {
 
       firebase.auth().signInWithPopup(provider)
       .then((result) => {
-        this.$router.replace("profile")
+        this.$router.push(this.$route.query.redirect || '/profile')
       })
       .catch(err => console.log(err));
     }
