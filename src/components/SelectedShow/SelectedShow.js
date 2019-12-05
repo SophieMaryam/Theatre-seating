@@ -51,17 +51,12 @@ export default Vue.extend({
     }
   },
   methods: {
-    routerPush() {
-      this.$router.push({
-        name: "Sections"
-      })
-    },
     onLinkClicked() {
       const currentUser = firebase.auth().currentUser;
       if(!currentUser) {
-        this.$router.replace({path: null});
-        // If not authenticated, add a path where to redirect after login.
-        this.$router.push({ path: 'login', query: { redirect: '/path' } });
+        this.$router.replace({path: "/login", query: { redirect: '/theatre'} });
+      } else {
+        this.$router.replace({path: "/theatre"});
       }
     }
   }
