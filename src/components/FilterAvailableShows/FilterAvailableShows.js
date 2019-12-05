@@ -46,7 +46,7 @@ export default Vue.extend({
   },
   methods: {
     selectedShow(show, index) {
-      this.$router.replace({ 
+      this.$router.push({ 
         name: "SelectedShow", 
         params: { title: show.title, date: show.date, location: show.location, img: show.img, index: index}
       });
