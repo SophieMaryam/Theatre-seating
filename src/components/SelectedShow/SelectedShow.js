@@ -51,7 +51,6 @@ export default Vue.extend({
   },
   mounted() {
     this.displaySelectedShowInfo();
-    // this.getAllShowData();
   },
   methods: {
     routerPush() {
@@ -59,11 +58,5 @@ export default Vue.extend({
         name: "Sections"
       })
     }
-    // getAllShowData() {
-    //   return this.allShowData = this.shows.map(show => {
-    //     this.allShowNames = show.name;
-    //     this.showInfo = show.info;
-    //   });
-    // }
   }
 });
