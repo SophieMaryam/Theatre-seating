@@ -7,6 +7,7 @@ export default Vue.extend({
       showName: this.$route.params.title,
       showImg: this.$route.params.img,
       showIndex: this.$route.params.index,
+      showDate: this.$route.params.date,
       readMore: false,
       allShows: [ 
         {
@@ -53,12 +54,6 @@ export default Vue.extend({
     // this.getAllShowData();
   },
   methods: {
-    displaySelectedShowInfo() {
-      if(this.$route.params.title == "Swan Lake") {
-        // return this.showInfo;
-        
-      }
-    },
     routerPush() {
       this.$router.push({
         name: "Sections"
