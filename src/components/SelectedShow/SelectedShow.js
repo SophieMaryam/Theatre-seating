@@ -14,10 +14,10 @@ export default Vue.extend({
         {
           name: "Swan Lake",
           info: [ 
-            { id: 1, date: "wed 21 oct", time: "20:00", cost: "from EU 25,00" },
-            { id: 2, date: "wed 21 oct", time: "20:00", cost: "from EU 25,00" },
-            { id: 3, date: "wed 21 oct", time: "20:00", cost: "from EU 25,00"},
-            { id: 4, date: "wed 21 oct", time: "20:00", cost: "from EU 25,00" }
+            { id: 1, date: "Wed 21 oct", time: "20:00", cost: "from EU 25,00" },
+            { id: 2, date: "Thurs 22 oct", time: "20:00", cost: "from EU 25,00" },
+            { id: 3, date: "Fri 23 oct", time: "20:00", cost: "from EU 35,00"},
+            { id: 4, date: "Sat 24 oct", time: "20:00", cost: "from EU 45,00" }
           ]
         },
         {
@@ -51,12 +51,12 @@ export default Vue.extend({
     }
   },
   methods: {
-    onLinkClicked() {
+    onLinkClicked(indx, show) {
       const currentUser = firebase.auth().currentUser;
       if(!currentUser) {
         this.$router.replace({path: "/login", query: { redirect: '/theatre'} });
       } else {
-        this.$router.replace({path: "/theatre"});
+        this.$router.replace({path: "/theatre" , query: {indx, show} });
       }
     }
   }
