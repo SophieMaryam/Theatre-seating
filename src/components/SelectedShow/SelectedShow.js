@@ -1,4 +1,5 @@
 import Vue from "vue";
+import firebase from "firebase";
 
 export default Vue.extend({
   name: "SelectedShow",
@@ -49,14 +50,19 @@ export default Vue.extend({
       ]
     }
   },
-  mounted() {
-    this.displaySelectedShowInfo();
-  },
   methods: {
     routerPush() {
       this.$router.push({
         name: "Sections"
       })
+    },
+    onLinkClicked() {
+      const currentUser = firebase.auth().currentUser;
+      if(!currentUser) {
+        this.$router.replace({path: null});
+        // If not authenticated, add a path where to redirect after login.
+        this.$router.push({ path: 'login', query: { redirect: '/path' } });
+      }
     }
   }
 });
