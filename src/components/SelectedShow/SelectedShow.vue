@@ -7,15 +7,13 @@
       <h2> {{ showDate }}</h2>
       <div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libe
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero
           <span
             v-if="readMore"
           ></span>
           <span v-else>...</span>
+          <span v-show="readMore">sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span>
         </p>
-        <p
-          v-show="readMore"
-        >ro sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
       </div>
       <div class="text-center">
         <button class="btn" @click="readMore =! readMore">
@@ -37,7 +35,7 @@
               <td>{{details.time}}</td>
               <td>{{details.cost}}</td>
               <td>
-                <button @click="routerPush()">Buy Ticket</button>
+                <button @click="onLinkClicked()">Buy Ticket</button>
               </td>
             </tr>
           </tbody>
