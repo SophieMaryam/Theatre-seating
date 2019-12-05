@@ -11,13 +11,13 @@
             <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
             <p>
               Visiting address
-              Amstel 115 - 125
-              1018 EM Amsterdam
+              Spuigracht 314
+              1012 QM Amsterdam
             </p>
             <p>
               Postal address
-              Postbus 20202
-              1000 HE Amsterdam
+              Postbus 40312
+              1012 QM Amsterdam
             </p>
             <p>
               Opening hours ticket office
