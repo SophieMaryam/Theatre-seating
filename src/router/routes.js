@@ -6,7 +6,7 @@ import Home from "../components/Home/Home.vue";
 import Sections from "../components/Sections/Sections.vue";
 import Login from "../components/Login/Login.vue";
 import Register from "../components/Register/Register.vue";
-import FilterAvailableShows from "../components/FilterAvailableShows/FilterAvailableShows.vue";
+import Calendar from "../components/Calendar/Calendar.vue";
 import Profile from "../views/Profile/Profile.vue";
 import Contact from "../views/Contact/Contact.vue";
 import SelectedShow from "../components/SelectedShow/SelectedShow.vue";
@@ -47,8 +47,8 @@ export const routes = [
   },
   {
     path: "/tickets",
-    name: "FilterAvailableShows",
-    component: FilterAvailableShows
+    name: "Calendar",
+    component: Calendar
   },
   {
     path: "/Contact",
