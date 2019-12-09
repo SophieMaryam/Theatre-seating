@@ -10,10 +10,8 @@ import "bootstrap-vue/dist/bootstrap-vue.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faPlaceOfWorship, faSignInAlt, faSearch, faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import firebaseConfig from "./common/config";
 
 Vue.config.productionTip = false;
-firebase.initializeApp(firebaseConfig);
 
 Vue.use(BootstrapVue);
 Vue.use(Vuex);
