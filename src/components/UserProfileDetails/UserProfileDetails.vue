@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="col-lg-4 order-lg-1 text-center">
+      <h1>Hi There!</h1>
       <img src="//placehold.it/150" class="mx-auto img-fluid img-circle d-block" alt="avatar">
       <h6 class="mt-2">Upload a different photo</h6>
       <label class="custom-file">
