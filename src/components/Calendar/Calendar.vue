@@ -34,9 +34,9 @@
   </div>
 </template>
 
-<style scoped src="./FilterAvailableShows.css">
+<style scoped src="./Calendar.css">
 </style>
 
 <script>
-  module.exports = require("./FilterAvailableShows.js");
+  module.exports = require("./Calendar.js");
 </script> 
