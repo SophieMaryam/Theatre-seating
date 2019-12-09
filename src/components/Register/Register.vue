@@ -10,7 +10,14 @@
       <h4 class="text-center text-uppercase mt-4">Sign Up using your email address</h4>
       <form @submit.prevent="onSubmit" class="pl-5 pr-5">
         <div class="input">
-          <label for="email">Mail</label>
+          <label for="fullName">Full Name</label>
+          <input
+                  type="text"
+                  id="fullName"
+                  v-model="fullName">
+        </div>
+        <div class="input">
+          <label for="email">Email</label>
           <input
                   type="email"
                   id="email"
