@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="pb-2">
-        <div class="card-body background d-flex mb-2" v-for="(show, index) in filteredList" :key="index">
+        <div class="card-body background d-flex mb-2 h-100" v-for="(show, index) in filteredList" :key="index">
           <div class="image">
             <img class="image" :src="show.img"/>
           </div>
