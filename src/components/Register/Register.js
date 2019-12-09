@@ -1,6 +1,7 @@
 import Vue from "vue";
 import firebase from "firebase";
 import LoginSocialMedia from "../LoginSocialMedia/LoginSocialMedia.vue";
+import { db } from "../../firebase";
 
 export default Vue.extend({
   name: "Register",
@@ -12,12 +13,23 @@ export default Vue.extend({
       email: "",
       password: "",
       confirmPassword: "",
-      terms: false
+      terms: false,
+      fullName: ""
     }
   },
   methods: {
     onSubmit() {
       firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(user => {
+        db.collection("profiles").set({
+          fullName: user.user.uid
+        })
+        .then(function() {
+            console.log("Document successfully writen");
+        })
+        .catch(function(error) {
+            console.error("Error adding document: ", error);
+        });
+      
         this.$router.replace("profile")
       })
       .catch(error => {
