@@ -21,7 +21,7 @@ export default {
   created() {
       this.getAllSeats();
       this.getGroupIds();
-      this.assignGroupIdToColor();
+      // this.assignGroupIdToColor();
   },
   computed: {
     assignColorToSeat() {
@@ -34,8 +34,9 @@ export default {
       });
 
       if (selectedSeat) {
-        const assignedSeat = this.assignedIdsToColors.find(coloredId => this.assignedIdsToColors.id === this.seat.id)
-        return assignedSeat.color
+        return "grey"
+        // const assignedSeat = this.assignedIdsToColors.find(coloredId => this.assignedIdsToColors.id === this.seat.id)
+        // return assignedSeat.color
       }
       return "green"
     }
@@ -47,16 +48,16 @@ export default {
     getGroupIds() {
       this.allGroupIds = this.allGroupData.map(group => group.id);
     },
-    assignGroupIdToColor() {
-      this.allGroupIds.forEach(id => {
-        const idNotAssignedColor = !(this.assignedIdsToColors.includes(id)) || this.assignedIdsToColors == "";
-        if (idNotAssignedColor) {
-          this.assignedIdsToColors.push({
-            id: id, color: this.getRandomColor()
-          })
-        }
-      });
-    },
+    // assignGroupIdToColor() {
+    //   this.allGroupIds.forEach(id => {
+    //     const idNotAssignedColor = !(this.assignedIdsToColors.includes(id)) || this.assignedIdsToColors == "";
+    //     if (idNotAssignedColor) {
+    //       this.assignedIdsToColors.push({
+    //         id: id, color: this.getRandomColor()
+    //       })
+    //     }
+    // //   });
+    // },
     getRandomColor() {
       return "#"+((1<<24)*Math.random()|0).toString(16)
     }
