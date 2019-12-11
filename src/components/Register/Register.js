@@ -19,9 +19,10 @@ export default Vue.extend({
   },
   methods: {
     onSubmit() {
-      firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(user => {
-        db.collection("profiles").set({
-          fullName: user.user.uid
+      firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
+      .then(user => {
+        db.collection("profiles").doc(user.user.uid).set({
+          name: this.fullName
         })
         .then(function() {
             console.log("Document successfully writen");
