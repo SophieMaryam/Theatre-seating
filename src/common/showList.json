@@ -1,0 +1,48 @@
+{
+    "availableShowsList": [
+        { "title": "Swan Lake",
+          "date": "Tuesday 15th - Wednesday 31st December 2019",
+          "img": "swanlake.jpg",
+          "location": "Auditorium",
+          "info": [
+            { "id": 1,"date": "Wed 21 oct", "time": "20:00", "cost": "from EU 25,00" },
+            { "id": 1,"date": "Thurs 22 oct", "time": "20:00", "cost": "from EU 25,00" },
+            { "id": 1,"date": "Fri 23 oct", "time": "20:00", "cost": "from EU 35,00" },
+            { "id": 1,"date": "Sat 24 oct", "time": "20:00", "cost": "from EU 45,00" }
+          ]
+        },
+        { "title": "Drummers",
+            "date": "Friday 15th - Wednesday 20th November 2019",
+            "img": "dance.jpg",
+            "location": "Room II",
+            "info": [
+                { "id": 1,"date": "Wed 21 oct", "time": "19:00", "cost": "from EU 25,00" },
+                { "id": 1,"date": "Thurs 22 oct", "time": "19:00", "cost": "from EU 25,00" },
+                { "id": 1,"date": "Fri 23 oct", "time": "19:00", "cost": "from EU 35,00" },
+                { "id": 1,"date": "Sat 24 oct", "time": "19:00", "cost": "from EU 45,00" }
+              ]
+        },
+        { "title": "Symphony II",
+            "date": "Tuesday 5th - Wednesday 10th December 2019",
+            "img": "band.jpg",
+            "location": "Auditorium",
+            "info": [
+                { "id": 1,"date": "Wed 21 oct", "time": "22:00", "cost": "from EU 25,00" },
+                { "id": 1,"date": "Thurs 22 oct", "time": "22:00", "cost": "from EU 25,00" },
+                { "id": 1,"date": "Fri 23 oct", "time": "22:00", "cost": "from EU 35,00" },
+                { "id": 1,"date": "Sat 24 oct", "time": "22:00", "cost": "from EU 45,00" }
+              ]
+        },
+        { "title": "Behind Closed Curtains",
+            "date": "Tuesday 1 - Wednesday 10 January 2020",
+            "img": "acting.jpg",
+            "location": "Room I",
+            "info": [
+                { "id": 1,"date": "Wed 21 oct", "time": "21:00", "cost": "from EU 25,00" },
+                { "id": 1,"date": "Thurs 22 oct", "time": "21:00", "cost": "from EU 25,00" },
+                { "id": 1,"date": "Fri 23 oct", "time": "21:00", "cost": "from EU 35,00" },
+                { "id": 1,"date": "Sat 24 oct", "time": "21:00", "cost": "from EU 45,00" }
+              ]
+        }
+    ]
+}
