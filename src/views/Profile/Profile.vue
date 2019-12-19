@@ -1,6 +1,7 @@
 <template>
   <div>
     <button @click="logout">Sign Out</button>
+    <button @click="deleteAccount">Delete Your Account</button>
     <b-tabs content-class="mt-3">
       <b-tab title="Profile" active><UserProfileDetails /></b-tab>
       <b-tab title="My Tickets"><p>I'm the second tab</p></b-tab>
