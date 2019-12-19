@@ -1,11 +1,11 @@
 import Vue from "vue";
-import firebase from "firebase/app";
-import { db } from "../../firebase.js";
+import { getProfile } from "../../firebase.js";
 
 export default Vue.extend({
   name: "Settings",
   data() {
     return {
+      name: "",
       profile: {
         name: null,
         phone: null,
@@ -23,18 +23,9 @@ export default Vue.extend({
       }
     }
   },
-  firestore() {
-    const user = firebase.auth().currentUser;
-    return {
-      profile: db.collection("profiles").doc(user.uid)
-      // profile: db.collection("profiles").doc(user.uid).get()
-    }
+  mounted() {
+    this.sayHello();
   },
-  // computed: {
-        // async getUserName() {
-    //   await checkUserInformation()
-    // },
-  // },
   methods: {
     updateProfile() {
       this.$firestore.profile.update(this.profile);
@@ -44,6 +35,12 @@ export default Vue.extend({
     },
     resetPassword() {
       console.log("Reset Password");
-    }
+    },
+    async setProfile() {
+      console.log("Hi")
+      const profile = await getProfile();
+      console.log(profile)
+      this.name = profile.name;
+  }
   }
 });
