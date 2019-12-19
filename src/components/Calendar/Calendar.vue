@@ -5,12 +5,13 @@
         <div class="col 6 ml-auto text-uppercase font-weight-bold text-center"> 
           <h2> Calendar </h2> 
         </div>
-        <div class="col-12 search-bar mt-5 mb-2">
+        <div class="d-flex mt-5 mb-2">
           <b-form-input
             v-model="search"
             type="text"
             placeholder="Search on shows or artists"
-          ></b-form-input>
+          ></b-form-input> 
+           <font-awesome-icon icon="search" class="icons ml-4 mt-2" />
         </div>
       </div>
       <div class="pb-2">
@@ -25,8 +26,8 @@
             </p>
           </div>
           <div class="text-uppercase ml-2">
-            <button @click="selectedShow(show, index)" class="btn text-black mt-2 text-uppercase font-weight-bold">Order Tickets </button> 
-            <button class="btn text-black mt-2 text-uppercase font-weight-bold">More info</button>
+            <b-button @click="selectedShow(show, index)" class="btn text-black mt-2 text-uppercase font-weight-bold">Order Tickets </b-button> 
+            <b-button class="btn text-black mt-2 text-uppercase font-weight-bold">More info</b-button>
           </div>
         </div>
       </div>
