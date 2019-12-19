@@ -1,6 +1,6 @@
 import Vue from "vue";
-import firebase from "firebase";
-import { db } from "../../firebase";
+import firebase from "firebase/app";
+import { db } from "../../firebase.js";
 
 export default Vue.extend({
   name: "Settings",
@@ -23,29 +23,26 @@ export default Vue.extend({
       }
     }
   },
-  mounted() {
-    this.doThat();
-  },
   firestore() {
     const user = firebase.auth().currentUser;
-    console.log(user);
     return {
-      profile: db.collection("profiles").doc(user.uid)
+      profile: db.collection("profiles").doc(user.uid).get()
     }
   },
+  // computed: {
+        // async getUserName() {
+    //   await checkUserInformation()
+    // },
+  // },
   methods: {
     updateProfile() {
-
+      this.$firestore.profile.update(this.profile);
     },
     uploadImage() {
-      console.log("hi");
+      console.log("upload Image");
     },
     resetPassword() {
-      console.log("To reset");
-    },
-    doThat() {
-      const user = firebase.auth().currentUser;
-      console.log(user.uid)
+      console.log("Reset Password");
     }
   }
 });
