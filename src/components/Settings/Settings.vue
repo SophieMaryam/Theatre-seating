@@ -5,42 +5,13 @@
         <div class="row h-100 align-items-center">
           <div class="col-md-6 ml-3">
             <h3>Profile settings</h3>
-            <p>{{profile.name}}</p>
+            <p>{{name}}</p>
             <p>Change your profile settings here</p>
           </div>
-          <!-- <div class="col-md-5">
-            <img src="/img/svg/profile.svg" width="300" alt class="img-fluid" />
-          </div> -->
         </div>
       </div>
 
       <div class="profile-content">
-        <!-- <ul class="nav nav-pills ml-3" id="myTab" role="tablist">
-          <li class="nav-item">
-            <a
-              class="nav-link active"
-              id="profile-tab"
-              data-toggle="tab"
-              href="#profile"
-              role="tab"
-              aria-controls="profile"
-              aria-selected="true"
-            >Profile</a>
-          </li>
-
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              id="account-tab"
-              data-toggle="tab"
-              href="#account"
-              role="tab"
-              aria-controls="account"
-              aria-selected="false"
-            >Account settings</a>
-          </li>
-        </ul> -->
-
         <div class="tab-content" id="myTabContent">
           <div
             class="tab-pane fade show active pt-3"
