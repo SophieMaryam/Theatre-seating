@@ -1,0 +1,17 @@
+.background {
+    background-color: #D3D3D3;
+}
+
+.text-size {
+    font-size: 11px;
+}
+
+.newsletter-input {
+    border-radius: 0;
+}
+
+.btn {
+    background-color: #8B0000;
+    border: rgb(170, 2, 2);
+    border-radius: 0;
+}
