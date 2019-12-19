@@ -25,10 +25,10 @@ export default Vue.extend({
           name: this.fullName
         })
         .then(function() {
-            console.log("Document successfully writen");
+            console.log("Registration: Document successfully writen");
         })
         .catch(function(error) {
-            console.error("Error adding document: ", error);
+            console.error("Registration - Error adding document: ", error);
         });
       
         this.$router.replace("profile")
