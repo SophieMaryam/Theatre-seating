@@ -34,21 +34,7 @@
   display: none;
 }
 
-.btn {
-  background-color: white;
-  border: none;
-}
-
-.btn:hover {
-  background-color: white;
-  border: none;
-}
-
-.dropdown-item.active, .dropdown-item:active {
-  background-color: white
-}
-
-.show > .btn-secondary.dropdown-toggle {
-  background-color: white;
-  border: none;
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
 }
