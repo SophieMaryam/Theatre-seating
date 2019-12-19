@@ -2,7 +2,7 @@ import firebase from "firebase";
 import Vue from "vue";
 import Router from "vue-router";
 
-import Home from "../components/Home/Home.vue";
+import Home from "../views/Home/Home.vue";
 import Sections from "../components/Sections/Sections.vue";
 import Login from "../components/Login/Login.vue";
 import Register from "../components/Register/Register.vue";
@@ -14,6 +14,10 @@ import SelectedShow from "../components/SelectedShow/SelectedShow.vue";
 Vue.use(Router);
 
 export const routes = [
+  {
+    path: "*",
+    redirec: "/login"
+  },
   {
     path: "/",
     name: "Home",
