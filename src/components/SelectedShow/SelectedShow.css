@@ -1,6 +1,4 @@
-/* table tr:nth-of-type(2) {background: blue;} */
-
-.image1 {
+.selected-show-img {
 	background-repeat:no-repeat;
 	background-size:cover;
 	height:500px;
@@ -10,7 +8,7 @@
     overflow: hidden;
 }
 
-.tha {
+.layover {
     position: relative;
     z-index: 1;
     margin-top: -251px;
@@ -23,4 +21,26 @@
     border: none;
     background: none;
     color: #8B0000;
+}
+
+.background {
+    background-color: #D3D3D3;
+    width: 650px;
+    height:450px;
+}
+
+.img-restaurant {
+    width: 600px;
+    height: 400px;
+}
+
+.layover-restaurant {
+    position: relative;
+    z-index: 1;
+    margin-top: -251px;
+}
+
+.padding {
+    padding-left: 135px;
+    padding-right: 135px;
 }
