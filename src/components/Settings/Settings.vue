@@ -5,12 +5,12 @@
         <div class="row h-100 align-items-center">
           <div class="col-md-6 ml-3">
             <h3>Profile settings</h3>
-
+            <p>{{profile.name}}</p>
             <p>Change your profile settings here</p>
           </div>
-          <div class="col-md-5">
+          <!-- <div class="col-md-5">
             <img src="/img/svg/profile.svg" width="300" alt class="img-fluid" />
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -54,7 +54,7 @@
                   <div class="form-group">
                     <input
                       type="text"
-                      name
+                      name=""
                       v-model="profile.name"
                       placeholder="Full name"
                       class="form-control"
