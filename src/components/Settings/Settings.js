@@ -26,7 +26,8 @@ export default Vue.extend({
   firestore() {
     const user = firebase.auth().currentUser;
     return {
-      profile: db.collection("profiles").doc(user.uid).get()
+      profile: db.collection("profiles").doc(user.uid)
+      // profile: db.collection("profiles").doc(user.uid).get()
     }
   },
   // computed: {
