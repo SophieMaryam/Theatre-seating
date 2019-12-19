@@ -71,8 +71,8 @@
               <strong>Useful links</strong>
             </h6>
             <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-            <div class="col-md-6 col-lg-7 text-center text-md-right">
-              <ul class="useful-links">
+            <div class="col-md-6 col-lg-7">
+              <ul>
                 <li>
                   <a href="#!" class="link-color">Terms and Agreements</a>
                 </li>
