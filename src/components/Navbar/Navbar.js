@@ -7,12 +7,23 @@ export default Vue.extend({
   data() {
     return {
       searchVisible: false,
-      isAutheticated:  firebase.auth().currentUser
+      isAuthenticated: this.checkAuthentication()
     }
   },
   methods: {
-    search() {
-      this.searchVisible = !this.searchVisible;
+    checkAuthentication() { 
+      const user = firebase.auth().currentUser;
+        if(user == null || "") {
+          this.$nextTick(() => { 
+            console.log("@hi")
+            this.isAuthenticated == false;
+          })
+        } else {
+          this.$nextTick(() => {   
+            console.log("bye")  
+            this.isAuthenticated = true;
+          })
+        }
     }
   }
 });

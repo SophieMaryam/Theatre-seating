@@ -32,20 +32,12 @@
             </li>
           </ul>
           <form class="form-inline">
-            <input
-              v-if="searchVisible"
-              class="form-control mr-sm-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <font-awesome-icon @click.prevent="search" icon="search" class="icons" />
             <font-awesome-icon icon="shopping-bag" class="icons" />
-            <b-dropdown id="button">
+            <b-dropdown id="button" variant="transparent" class="btn btn-outline-transparent">
               <template slot="button-content">
                 <font-awesome-icon class="icons" icon="sign-in-alt" />
               </template>
-              <!-- <div v-if="isAuthenticated"> -->
+              <div v-if="!isAuthenticated">
                 <b-dropdown-item class="dropdown">
                   <router-link to="/login" class="link">Login</router-link>
                 </b-dropdown-item>
@@ -53,13 +45,13 @@
                 <b-dropdown-item>
                   <router-link to="/register" class="link">Registeration</router-link>
                 </b-dropdown-item>
-              <!-- </div> -->
-              <!-- <div v-else> -->
+              </div>
+              <div v-else>
                 <b-dropdown-divider></b-dropdown-divider>
                 <b-dropdown-item>
                   <router-link to="/profile" class="link">My Account</router-link>
                 </b-dropdown-item>
-              <!-- </div> -->
+              </div>
             </b-dropdown>
           </form>
         </div>
