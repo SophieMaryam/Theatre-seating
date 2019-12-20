@@ -1,0 +1,22 @@
+{
+    "allProductData": [
+        {
+            "name": "Camera",
+            "price": "300",
+            "img": "camera.jpeg",
+            "alt": "Camera"
+        },
+        {
+            "name": "Art",
+            "price": "150",
+            "img": "art.jpeg",
+            "alt": "Two works of art by Jane Doe"
+        },
+        {
+            "name": "Butterfly Ornaments",
+            "price": "30",
+            "img": "butterfly.jpeg",
+            "alt": "Two butterfly ornaments"
+        }
+    ]
+}
