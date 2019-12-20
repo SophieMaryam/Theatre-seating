@@ -35,7 +35,7 @@
       </p>
     </div>
     <div id="shop" class="image"></div>
-    <Newsletter />
+    <TheatreNewsletter />
   </div>
 </template>
 

@@ -1,12 +1,12 @@
 import Vue from "vue";
 import firebase from "firebase";
 import allShowsDataJSON from "../../common/currentShowData.json";
-import Newsletter from "../Newsletter/Newsletter.vue";
+import TheatreNewsletter from "../TheatreNewsletter/TheatreNewsletter.vue";
 
 export default Vue.extend({
   name: "SelectedShow",
   components: {
-    Newsletter
+    TheatreNewsletter
   },
   data() {
     return {

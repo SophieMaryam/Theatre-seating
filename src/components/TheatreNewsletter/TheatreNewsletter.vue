@@ -19,8 +19,8 @@
 </template>
 
 <script>
-module.exports = require("./Newsletter.js");
+module.exports = require("./TheatreNewsletter.js");
 </script>
 
-<style scoped src="./Newsletter.css">
+<style scoped src="./TheatreNewsletter.css">
 </style>
