@@ -35,9 +35,9 @@
   </div>
 </template>
 
-<style scoped src="./Calendar.css">
+<style scoped src="./CalendarPage.css">
 </style>
 
 <script>
-  module.exports = require("./Calendar.js");
+  module.exports = require("./CalendarPage.js");
 </script> 
