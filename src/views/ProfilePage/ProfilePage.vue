@@ -12,10 +12,10 @@
   </div>
 </template>
 
-<style scoped src="./Profile.css">
+<style scoped src="./ProfilePage.css">
 </style> 
 
 <script>
-module.exports = require("./Profile.js");
+module.exports = require("./ProfilePage.js");
 </script>
 

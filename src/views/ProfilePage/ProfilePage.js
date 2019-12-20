@@ -4,7 +4,7 @@ import UserProfileDetails from "../../components/UserProfileDetails/UserProfileD
 import Settings from "../../components/Settings/Settings.vue";
 import { deleteUserAccount } from "../../firebase.js"
 export default Vue.extend({
-  name: "Profile",
+  name: "ProfilePage",
   components: {
     UserProfileDetails,
     Settings
