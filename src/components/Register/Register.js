@@ -22,7 +22,10 @@ export default Vue.extend({
       firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
       .then(user => {
         db.collection("profiles").doc(user.user.uid).set({
-          name: this.fullName
+          name: this.fullName,
+          address: "",
+          postalCode:"",
+          phoneNumber: ""
         })
         .then(function() {
             console.log("Registration: Document successfully writen");
