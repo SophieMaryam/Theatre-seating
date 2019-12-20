@@ -1,6 +1,6 @@
 import Vue from "vue";
 import firebase from "firebase";
-import LoginSocialMedia from "../LoginSocialMedia/LoginSocialMedia.vue";
+import LoginSocialMedia from "../../components/LoginSocialMedia/LoginSocialMedia.vue";
 import { db } from "../../firebase";
 
 export default Vue.extend({
