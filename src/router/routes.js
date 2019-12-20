@@ -7,8 +7,8 @@ import Sections from "../components/Sections/Sections.vue";
 import UserLogin from "../components/UserLogin/UserLogin.vue";
 import UserRegistration from "../components/UserRegistration/UserRegistration.vue";
 import Calendar from "../components/Calendar/Calendar.vue";
-import Profile from "../views/Profile/Profile.vue";
-import Contact from "../views/Contact/Contact.vue";
+import ProfilePage from "../views/ProfilePage/ProfilePage.vue";
+import ContactPage from "../views/ContactPage/ContactPage.vue";
 import SelectedShow from "../components/SelectedShow/SelectedShow.vue";
 
 Vue.use(Router);
@@ -55,14 +55,14 @@ export const routes = [
     component: Calendar
   },
   {
-    path: "/Contact",
-    name: "Contact",
-    component: Contact
+    path: "/contact",
+    name: "ContactPage",
+    component: ContactPage
   },
   {
     path: "/profile",
-    name: "Profile",
-    component: Profile,
+    name: "ProfilePage",
+    component: ProfilePage,
     meta: {
       requiresAuth: true
     }
