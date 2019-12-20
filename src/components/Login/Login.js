@@ -16,7 +16,7 @@ export default  Vue.extend({
   methods: {
     login() {
       firebase.auth().signInWithEmailAndPassword(this.email, this.password)
-      .then(user => {
+      .then(() => {
         this.$router.push(this.$route.query.redirect || '/profile')
       })
       .catch(err => console.log(err));
@@ -25,7 +25,7 @@ export default  Vue.extend({
       const provider = new firebase.auth.GoogleAuthProvider();
 
       firebase.auth().signInWithPopup(provider)
-      .then(result => {
+      .then(() => {
         this.$router.push(this.$route.query.redirect || '/profile')
       })
       .catch(err => console.log(err));
