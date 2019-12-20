@@ -2,7 +2,7 @@ import firebase from "firebase";
 import Vue from "vue";
 import Router from "vue-router";
 
-import Home from "../views/Home/Home.vue";
+import HomePage from "../views/HomePage/HomePage.vue";
 import Sections from "../components/Sections/Sections.vue";
 import UserLogin from "../components/UserLogin/UserLogin.vue";
 import UserRegistration from "../components/UserRegistration/UserRegistration.vue";
@@ -20,8 +20,8 @@ export const routes = [
   },
   {
     path: "/",
-    name: "Home",
-    component: Home
+    name: "HomePage",
+    component: HomePage
   },
   {
     path: "/theatre",

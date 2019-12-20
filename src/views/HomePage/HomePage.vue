@@ -39,9 +39,9 @@
   </div>
 </template>
 
-<style scoped src="./Home.css">
+<style scoped src="./HomePage.css">
 </style>
 
 <script>
-module.exports = require("./Home.js");
+module.exports = require("./HomePage.js");
 </script>

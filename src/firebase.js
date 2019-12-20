@@ -31,7 +31,7 @@ export async function deleteUserAccount() {
             console.log("Document successfully deleted!");
             firebase.auth().signOut()
             .then(() => {
-              router.push({name: "Home"})
+              router.push({name: "HomePage"})
             })
             .catch(err => console.log(err));
         }).catch(error => {
