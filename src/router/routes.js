@@ -5,7 +5,7 @@ import Router from "vue-router";
 import Home from "../views/Home/Home.vue";
 import Sections from "../components/Sections/Sections.vue";
 import Login from "../components/Login/Login.vue";
-import Register from "../components/Register/Register.vue";
+import UserRegistration from "../components/UserRegistration/UserRegistration.vue";
 import Calendar from "../components/Calendar/Calendar.vue";
 import Profile from "../views/Profile/Profile.vue";
 import Contact from "../views/Contact/Contact.vue";
@@ -33,8 +33,8 @@ export const routes = [
   },
   {
     path: "/register",
-    name: "Register",
-    component: Register
+    name: "UserRegistration",
+    component: UserRegistration
   },
   {
     path: "/login",
