@@ -4,27 +4,9 @@
       <div class="container">
         <h2 class="mb-3 font-weight-bold text-white pt-4">Shows</h2>
         <div class="row">
-          <div class="col-lg-3 col-md-12 mb-4">
+          <div class="col-lg-3 col-md-12 mb-4"  v-for="show in allAvailableShowsData" :key="show.id">
             <div>
-              <img src="../../assets/swanlake.jpg" class="img-fluid" alt="Swan Lake image">
-            </div>
-            <button class="check-btn text-white mt-3">Find Tickets</button>
-          </div>
-          <div class="col-lg-3 col-md-12 mb-4">
-            <div>
-              <img src="../../assets/dance.jpg" class="img-fluid" alt="Drummers image">
-            </div>
-            <button class="check-btn text-white mt-3">Find Tickets</button>
-          </div>
-          <div class="col-lg-3 col-md-12 mb-4">
-            <div>
-              <img src="../../assets/band.jpg" class="img-fluid" alt="Band image">
-            </div>
-            <button class="check-btn text-white mt-3">Find Tickets</button>
-          </div>
-          <div class="col-lg-3 col-md-12 mb-4">
-            <div>
-              <img src="../../assets/acting.jpg" class="img-fluid" alt="Behind Closed Curtains image">
+              <img :src="require(`../../assets/${show.img}`)" class="img-fluid" :alt="show.alt">
             </div>
             <button class="check-btn text-white mt-3">Find Tickets</button>
           </div>

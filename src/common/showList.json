@@ -1,9 +1,11 @@
 {
     "availableShowsList": [
-        { "title": "Swan Lake",
+        { 
+          "title": "Swan Lake",
           "date": "Tuesday 15th - Wednesday 31st December 2019",
           "img": "swanlake.jpg",
           "location": "Auditorium",
+          "alt": "Dancers dancing in Swan Lake",
           "info": [
             { "id": 1,"date": "Wed 21 oct", "time": "20:00", "cost": "from EU 25,00" },
             { "id": 1,"date": "Thurs 22 oct", "time": "20:00", "cost": "from EU 25,00" },
@@ -11,10 +13,12 @@
             { "id": 1,"date": "Sat 24 oct", "time": "20:00", "cost": "from EU 45,00" }
           ]
         },
-        { "title": "Drummers",
+        { 
+            "title": "Drummers",
             "date": "Friday 15th - Wednesday 20th November 2019",
             "img": "dance.jpg",
             "location": "Room II",
+            "alt": "People drumming and dancing in Drummers",
             "info": [
                 { "id": 1,"date": "Wed 21 oct", "time": "19:00", "cost": "from EU 25,00" },
                 { "id": 1,"date": "Thurs 22 oct", "time": "19:00", "cost": "from EU 25,00" },
@@ -22,10 +26,12 @@
                 { "id": 1,"date": "Sat 24 oct", "time": "19:00", "cost": "from EU 45,00" }
               ]
         },
-        { "title": "Symphony II",
+        { 
+            "title": "Symphony II",
             "date": "Tuesday 5th - Wednesday 10th December 2019",
             "img": "band.jpg",
             "location": "Auditorium",
+            "alt": "Conductor and orchestra in Symphony II",
             "info": [
                 { "id": 1,"date": "Wed 21 oct", "time": "22:00", "cost": "from EU 25,00" },
                 { "id": 1,"date": "Thurs 22 oct", "time": "22:00", "cost": "from EU 25,00" },
@@ -33,10 +39,12 @@
                 { "id": 1,"date": "Sat 24 oct", "time": "22:00", "cost": "from EU 45,00" }
               ]
         },
-        { "title": "Behind Closed Curtains",
+        { 
+            "title": "Behind Closed Curtains",
             "date": "Tuesday 1 - Wednesday 10 January 2020",
             "img": "acting.jpg",
             "location": "Room I",
+            "alt": "Silhouettes of actors in front of curtain in Behind Closed Curtains",
             "info": [
                 { "id": 1,"date": "Wed 21 oct", "time": "21:00", "cost": "from EU 25,00" },
                 { "id": 1,"date": "Thurs 22 oct", "time": "21:00", "cost": "from EU 25,00" },
