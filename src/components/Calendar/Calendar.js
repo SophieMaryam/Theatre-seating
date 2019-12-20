@@ -10,6 +10,11 @@ export default Vue.extend({
     }
   },
   methods: {
+    filteredList() {
+      return this.allAvailableShowsData.filter(show => {
+        return show.title.toLowerCase().includes(this.search.toLowerCase())
+      })
+    },
     selectedShow(show, index) {
       this.$router.push({ 
         name: "SelectedShow", 
