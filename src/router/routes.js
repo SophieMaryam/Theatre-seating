@@ -3,13 +3,15 @@ import Vue from "vue";
 import Router from "vue-router";
 
 import HomePage from "../views/HomePage/HomePage.vue";
+import ContactPage from "../views/ContactPage/ContactPage.vue";
 import Sections from "../components/Sections/Sections.vue";
 import UserLogin from "../views/UserLogin/UserLogin.vue";
 import UserRegistration from "../views/UserRegistration/UserRegistration.vue";
-import CalendarPage from "../components/CalendarPage/CalendarPage.vue";
 import ProfilePage from "../views/ProfilePage/ProfilePage.vue";
-import ContactPage from "../views/ContactPage/ContactPage.vue";
+import CalendarPage from "../components/CalendarPage/CalendarPage.vue";
 import SelectedShow from "../components/SelectedShow/SelectedShow.vue";
+import ProductList from "../components/ProductList/ProductList.vue";
+import SelectedProduct from "../components/SelectedProduct/SelectedProduct.vue";
 
 Vue.use(Router);
 
@@ -71,6 +73,16 @@ export const routes = [
     path: "/shows/:title",
     name: "SelectedShow",
     component: SelectedShow
+  },
+  {
+    path: "/products",
+    name: "ProductList",
+    component: ProductList
+  },
+  {
+    path: "/product/:name",
+    name: "SelectedProduct",
+    component: SelectedProduct
   }
 ]
 
