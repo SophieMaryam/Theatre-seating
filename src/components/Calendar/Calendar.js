@@ -1,5 +1,5 @@
 import Vue from "vue";
-import allShowsDataJSON from "../../common/showList.json";
+import allShowsDataJSON from "../../common/currentShowData.json";
 
 export default Vue.extend({
   name: "CurrentShows",

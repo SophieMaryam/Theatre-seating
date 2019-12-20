@@ -1,6 +1,6 @@
 import Vue from "vue";
 import firebase from "firebase";
-import allShowsDataJSON from "../../common/showList.json";
+import allShowsDataJSON from "../../common/currentShowData.json";
 import Newsletter from "../Newsletter/Newsletter.vue";
 
 export default Vue.extend({
