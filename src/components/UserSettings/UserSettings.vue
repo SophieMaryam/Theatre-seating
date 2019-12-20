@@ -77,10 +77,10 @@
   </div>
 </template>
 
-<style scoped src="./Settings.css">
+<style scoped src="./UserSettings.css">
 </style>
 
 <script>
-module.exports = require("./Settings.js");
+module.exports = require("./UserSettings.js");
 </script>
 

@@ -2,7 +2,7 @@ import Vue from "vue";
 import { getAllUserProfileData, updateUserPersonalData } from "../../firebase.js";
 
 export default Vue.extend({
-  name: "Settings",
+  name: "UserSettings",
   data() {
     return {
       profile: {}
