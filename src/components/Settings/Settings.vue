@@ -5,7 +5,6 @@
         <div class="row h-100 align-items-center">
           <div class="col-md-6 ml-3">
             <h3>Profile settings</h3>
-            <p>{{name}}</p>
             <p>Change your profile settings here</p>
           </div>
         </div>
