@@ -1,0 +1,9 @@
+.selected-product-img {
+	background-repeat:no-repeat;
+	background-size:cover;
+	height:500px;
+    width:100%;
+    z-index: 2;
+    background-position: center;
+    overflow: hidden;
+}
