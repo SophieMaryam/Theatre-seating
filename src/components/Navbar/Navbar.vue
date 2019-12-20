@@ -22,10 +22,10 @@
               <router-link class="nav-link text-uppercase font-weight-bold" to="/tickets">What's On</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-uppercase font-weight-bold" to="#">About Orius</router-link>
+              <router-link class="nav-link text-uppercase font-weight-bold" to="#">Food & Drink</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-uppercase font-weight-bold" to="#">Shop</router-link>
+              <router-link class="nav-link text-uppercase font-weight-bold" to="/products">Shop</router-link>
             </li>
             <li>
               <router-link class="nav-link text-uppercase font-weight-bold" to="/Contact">Contact</router-link>
