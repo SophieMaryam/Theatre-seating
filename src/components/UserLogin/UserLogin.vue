@@ -33,9 +33,9 @@
   </div>
 </template>
 
-<style scoped src="./Login.css">
+<style scoped src="./UserLogin.css">
 </style>
 
 <script>
-  module.exports = require("./Login.js");
+  module.exports = require("./UserLogin.js");
 </script>

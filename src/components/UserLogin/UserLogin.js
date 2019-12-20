@@ -3,7 +3,7 @@ import firebase from "firebase";
 import LoginSocialMedia from "../LoginSocialMedia/LoginSocialMedia.vue";
 
 export default  Vue.extend({
-  name: "Login",
+  name: "UserLogin",
   components: {
     LoginSocialMedia
   },
