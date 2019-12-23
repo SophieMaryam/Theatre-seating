@@ -12,5 +12,10 @@ export default Vue.extend({
             productName: this.$route.params.name,
             allProductData: allProductDataJSon.allProductData
         }
+    },
+    methods: {
+        openContinueShoppingModal() {
+            
+        }
     }
 });
