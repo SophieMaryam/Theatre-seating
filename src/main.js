@@ -10,10 +10,12 @@ import "bootstrap-vue/dist/bootstrap-vue.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faPlaceOfWorship, faSignInAlt, faSearch, faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import VueAgile from 'vue-agile';
 
 Vue.config.productionTip = false;
 
 Vue.use(BootstrapVue);
+Vue.use(VueAgile);
 Vue.use(Vuex);
 
 let app = "";
