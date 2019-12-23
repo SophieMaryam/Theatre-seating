@@ -10,8 +10,8 @@
           <img
           :src="require(`../../assets/products/${product.img}`)"
           :alt="product.alt"
-          style="width:100%; height:100%;"
-          class="img-responsive"
+          style="width:400px; height:300px;"
+          class="img-fluid ml-2"
         />
         </div>
         <div>
