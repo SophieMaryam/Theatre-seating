@@ -1,38 +1,24 @@
 <template>
-      <transition name="modal">
-    <div class="modal-mask">
-      <div class="modal-wrapper">
-        <div class="modal-container">
-
-          <div class="modal-header">
-            <slot name="header">
-              default header
-            </slot>
-          </div>
-
-          <div class="modal-body">
-            <slot name="body">
-              default body
-            </slot>
-          </div>
-
-          <div class="modal-footer">
-            <slot name="footer">
-              default footer
-              <button class="modal-default-button" @click="$emit('close')">
-                OK
-              </button>
-            </slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </transition>
+  <div>
+    <b-button v-b-modal.modalName-1>Put in Basket</b-button>
+    <b-modal
+      id="modalName-1"
+      ref="modalName-1"
+      title="Added to your Basket!"
+      hide-footer
+    >
+    <h1>{{ productName }}</h1>
+    <h2>EUR{{ productPrice }}</h2>
+    <img src="" alt="">
+    <b-button @click="goToBasket()">Go to Basket</b-button>
+    <b-button @click="buyProduct()">Buy</b-button>
+    </b-modal>
+  </div>
 </template>
 
 <style scoped src="./ContinueShoppingModal.css">
 </style>
 
 <script>
-  module.exports = require("./ContinueShoppingModal.js");
+module.exports = require("./ContinueShoppingModal.js");
 </script> 
