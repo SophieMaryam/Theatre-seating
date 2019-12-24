@@ -1,9 +1,12 @@
 .selected-product-img {
-	background-repeat:no-repeat;
-	background-size:cover;
-	height:500px;
-    width:100%;
-    z-index: 2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    width: 450px;
     background-position: center;
     overflow: hidden;
+}
+
+.display {
+    display: -webkit-box !important;
 }
