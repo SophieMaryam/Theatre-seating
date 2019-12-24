@@ -8,14 +8,6 @@ import { router } from "./router/routes";
 firebase.initializeApp(config);
 
 export const db = firebase.firestore();
-const user = firebase.auth().currentUser;
-
-export async function getUserProfileData() {
-    const user = firebase.auth().currentUser;
-    const querySnapshot = await db.collection("profiles").doc(user.uid).get()
-    const userFullName = querySnapshot.data().name;
-    return userFullName;
-}
 
 export async function getAllUserProfileData() {
   const user = firebase.auth().currentUser;
