@@ -1,25 +1,30 @@
 import Vue from "vue";
 import firebase from "firebase";
+import { addProductToBasket } from "../../firebase.js";
+import allProductDataJSon from "../../common/productData.json";
 
 export default Vue.extend({
     name: "ContinueShoppingModal",
-    props: ["productName", "productIndex", "productPrice"],
+    props: ["productName", "singleProduct"],
     data() {
         return {
             modalOpen: false,
-            productName: "",
-            productIndex: "",
-            productPrice: ""
+            allProductData: allProductDataJSon.allProductData,
         }
     },
     methods: {
-        goToBasket() {
+        async putInBasket(product) {
+            await addProductToBasket(product.name, product.price);
+        },
+        goToBasket(productName) {
             const currentUser = firebase.auth().currentUser;
             if (!currentUser) {
                 // Incomplete: This stills need to query theatre/indx & show name
                 this.$router.replace({ path: "/login", query: { redirect: '/theatre' } });
             } else {
-                this.$router.replace({ path: "/profile", query: { productIndex, productName } });
+                // await updateUserPersonalData(this.profile);
+                this.$store.commit("selectedTab", 3);
+                this.$router.replace({ path: "/profile", query: { productName } });
             }
         }
     },

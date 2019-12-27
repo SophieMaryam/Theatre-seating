@@ -1,17 +1,16 @@
 <template>
   <div>
-    <b-button v-b-modal.modalName-1>Put in Basket</b-button>
-    <b-modal
-      id="modalName-1"
-      ref="modalName-1"
-      title="Added to your Basket!"
-      hide-footer
-    >
-    <h1>{{ productName }}</h1>
-    <h2>EUR{{ productPrice }}</h2>
-    <img src="" alt="">
-    <b-button @click="goToBasket()">Go to Basket</b-button>
-    <b-button @click="buyProduct()">Buy</b-button>
+    <b-button v-b-modal.modalName-1 @click="putInBasket(singleProduct)">Put in Basket</b-button>
+    <b-modal id="modalName-1" ref="modalName-1" title="Added to your Basket!" hide-footer>
+      <div v-for="(product, index) in allProductData" :key="index">
+        <div v-if="productName == product.name">
+          <h1>{{ product.name }}</h1>
+          <h2>EUR{{ product.price }}</h2>
+          <img />
+          <b-button @click="goToBasket(product)">Go to Basket</b-button>
+          <b-button @click="buyProduct()">Buy</b-button>
+        </div>
+      </div>
     </b-modal>
   </div>
 </template>
