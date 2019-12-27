@@ -9,7 +9,7 @@
         <div class="container bg-white col-5">
           <h1 class="bg-white pt-4 pb-3 padding text-uppercase">{{ product.name }}</h1>
           <h3 class="padding text-muted">{{ product.price }}</h3>
-          <ContinueShoppingModal :productName="product.name" :productPrice="product.price" :productIndex="index" />
+          <ContinueShoppingModal :productName="product.name" :singleProduct="product" />
         </div>
       </div>
     </div>
