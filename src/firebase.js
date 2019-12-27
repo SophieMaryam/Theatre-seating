@@ -18,34 +18,64 @@ export async function getAllUserProfileData() {
 
 export async function deleteUserAccount() {
   const user = firebase.auth().currentUser;
-    await db.collection("profiles").doc(user.uid).delete()
+  await db.collection("profiles").doc(user.uid).delete()
+    .then(() => {
+      console.log("Document successfully deleted!");
+      firebase.auth().signOut()
         .then(() => {
-            console.log("Document successfully deleted!");
-            firebase.auth().signOut()
-            .then(() => {
-              router.push({name: "HomePage"})
-            })
-            .catch(err => console.log(err));
-        }).catch(error => {
-            console.error("Error removing document: ", error);
-        });
+          router.push({ name: "HomePage" })
+        })
+        .catch(err => console.log(err));
+    }).catch(error => {
+      console.error("Error removing document: ", error);
+    });
 }
 
-export async function updateUserPersonalData(updatedUserData) { 
-    const user = firebase.auth().currentUser;
-    const profileRef = await db.collection("profiles").doc(user.uid);
-    return profileRef.update({
-      name: updatedUserData.name,
-      address: updatedUserData.address,
-      postalCode: updatedUserData.postalCode,
-      phoneNumber: updatedUserData.phoneNumber
-    }).then(() => {
-      console.log("woo updated")
-      return {success: true}
+export async function updateUserPersonalData(updatedUserData) {
+  const user = firebase.auth().currentUser;
+  const profileRef = await db.collection("profiles").doc(user.uid);
+  return profileRef.update({
+    name: updatedUserData.name,
+    address: updatedUserData.address,
+    postalCode: updatedUserData.postalCode,
+    phoneNumber: updatedUserData.phoneNumber
+  }).then(() => {
+    console.log("User data update is a success!")
+    return { success: true }
+  }).catch((error) => {
+    return new Error('Error updating document: ', error)
+  });
+}
+
+export async function getAllBasketProducts() {
+  const user = firebase.auth().currentUser;
+  const querySnapshot = await db.collection("profiles").doc(user.uid).get()
+  const basketProducts = querySnapshot.data().basketProducts;
+  return basketProducts;
+}
+
+export async function addProductToBasket(name) {
+  const user = firebase.auth().currentUser;
+  await db.collection("profiles").doc(user.uid).update({
+    basketProducts: firebase.firestore.FieldValue.arrayUnion(name)
+  })
+    .then(() => {
+      console.log("Document successfully added!")
+      return { success: true }
     }).catch((error) => {
       return new Error('Error updating document: ', error)
     });
-  }
+}
 
-
-
+export async function deleteBasketProduct(name) {
+  const user = firebase.auth().currentUser;
+  await db.collection("profiles").doc(user.uid).update({
+    basketProducts: firebase.firestore.FieldValue.arrayRemove(name)
+  })
+    .then(() => {
+      console.log("Document successfully deleted!")
+      return { success: true }
+    }).catch((error) => {
+      return new Error('Error updating document: ', error)
+    })
+}
