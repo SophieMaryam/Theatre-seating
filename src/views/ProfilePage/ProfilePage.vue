@@ -6,11 +6,14 @@
       <b-tab title="Profile">
         <UserProfileDetails />
       </b-tab>
-      <b-tab title="My Tickets">
+      <b-tab title="Purchases">
         <p>I'm the second tab</p>
       </b-tab>
       <b-tab title="UserSettings">
         <UserSettings />
+      </b-tab>
+      <b-tab title="Basket">
+        <UserBasket />
       </b-tab>
     </b-tabs>
   </div>
