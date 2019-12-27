@@ -25,10 +25,12 @@ export default Vue.extend({
           name: this.fullName,
           address: "",
           postalCode:"",
-          phoneNumber: ""
+          phoneNumber: "",
+          basketProducts: [],
+          purchasedProducts: []
         })
         .then(function() {
-            console.log("Registration: Document successfully writen");
+            console.log("Registration: Document successfully written");
         })
         .catch(function(error) {
             console.error("Registration - Error adding document: ", error);
