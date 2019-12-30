@@ -8,7 +8,7 @@
       </div>
       <hr class="hr-text mt-4 mb-4" data-content="OR">
       <h4 class="text-center text-uppercase mt-4">Sign Up using your email address</h4>
-      <form @submit.prevent="onSubmit" class="pl-5 pr-5">
+      <form @submit.prevent="onSubmitRegisterUser" class="pl-5 pr-5">
         <div class="input">
           <label for="fullName">Full Name</label>
           <input
