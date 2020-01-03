@@ -1,14 +1,13 @@
 import Vue from "vue";
-import firebase from "firebase";
 import LoginSocialMedia from "../../components/LoginSocialMedia/LoginSocialMedia.vue";
-import { db } from "../../firebase";
+import { userRegistration } from "../../firebase.js";
 
 export default Vue.extend({
   name: "UserRegistration",
   components: {
     LoginSocialMedia
   },
-  data () {
+  data() {
     return {
       email: "",
       password: "",
@@ -18,30 +17,8 @@ export default Vue.extend({
     }
   },
   methods: {
-    onSubmit() {
-      firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
-      .then(user => {
-        db.collection("profiles").doc(user.user.uid).set({
-          name: this.fullName,
-          address: "",
-          postalCode:"",
-          phoneNumber: "",
-          basketProducts: [],
-          purchasedProducts: []
-        })
-        .then(function() {
-            console.log("Registration: Document successfully written");
-        })
-        .catch(function(error) {
-            console.error("Registration - Error adding document: ", error);
-        });
-      
-        this.$router.replace("profile")
-      })
-      .catch(error => {
-        alert(error)
-        console.log(error)
-      })
+    async onSubmitRegisterUser() {
+      await userRegistration(this.email, this.password, this.fullName)
     }
   }
 });

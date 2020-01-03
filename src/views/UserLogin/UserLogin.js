@@ -1,6 +1,7 @@
 import Vue from "vue";
 import firebase from "firebase";
 import LoginSocialMedia from "../../components/LoginSocialMedia/LoginSocialMedia.vue";
+import { userLogin } from "../../firebase.js";
 
 export default  Vue.extend({
   name: "UserLogin",
@@ -14,12 +15,9 @@ export default  Vue.extend({
     }
   },
   methods: {
-    login() {
-      firebase.auth().signInWithEmailAndPassword(this.email, this.password)
-      .then(() => {
-        this.$router.push(this.$route.query.redirect || '/profile')
-      })
-      .catch(err => console.log(err));
+    async login() {
+      const value = this.$route.query.redirect;
+      await userLogin(this.email, this.password, value)
     },
     socialLoginIn() {
       const provider = new firebase.auth.GoogleAuthProvider();
