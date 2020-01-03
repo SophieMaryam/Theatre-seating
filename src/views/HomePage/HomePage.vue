@@ -12,7 +12,7 @@
     </div>
     <CurrentShows />
     <div class="container justify">
-      <h1 class="text-center">About Orius</h1>
+      <!-- <h1 class="text-center">About Orius</h1>
       <p class="d-flex justify-content-center pl-5 pr-5">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
@@ -28,7 +28,7 @@
         Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. 
         Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi. 
         Aenean magna nisl, mollis quis, molestie eu, feugiat in, orci. In hac habitasse platea dictumst.
-      </p>
+      </p> -->
     </div>
     <div class="bg-color">
       <h1 class="text-center text-white pt-5">Food and Drink</h1>
