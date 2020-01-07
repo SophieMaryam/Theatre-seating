@@ -1,5 +1,4 @@
 import Vue from "vue";
-import { getAllBasketProducts, deleteBasketProduct } from "../../firebase.js";
 
 export default Vue.extend({
     name: "UserBasket",
