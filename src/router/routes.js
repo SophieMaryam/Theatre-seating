@@ -12,7 +12,7 @@ import CalendarPage from "../components/CalendarPage/CalendarPage.vue";
 import SelectedShow from "../components/SelectedShow/SelectedShow.vue";
 import ProductList from "../components/ProductList/ProductList.vue";
 import SelectedProduct from "../components/SelectedProduct/SelectedProduct.vue";
-import CheckOut from "../components/CheckOut/CheckOut.vue";
+import CheckOut from "../views/CheckOut/CheckOut.vue";
 
 Vue.use(Router);
 
