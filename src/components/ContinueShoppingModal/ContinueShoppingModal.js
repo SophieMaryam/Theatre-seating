@@ -5,7 +5,7 @@ import allProductDataJSon from "../../common/productData.json";
 
 export default Vue.extend({
     name: "ContinueShoppingModal",
-    props: ["productName", "singleProduct"],
+    props: ["selectedProduct"],
     data() {
         return {
             modalOpen: false,
@@ -13,19 +13,26 @@ export default Vue.extend({
         }
     },
     methods: {
-        async putInBasket(product) {
-            await addProductToBasket(product.name, product.price);
+        addToBasket(product) {
+            let products = [];
+            if (localStorage.getItem('products')) {
+                products = JSON.parse(localStorage.getItem('products'));
+            }
+            products.push({ name: product.name, image: product.img, price: product.price });
+            localStorage.setItem('products', JSON.stringify(products));
         },
         goToBasket(productName) {
             const currentUser = firebase.auth().currentUser;
             if (!currentUser) {
                 // Incomplete: This stills need to query theatre/indx & show name
-                this.$router.replace({ path: "/login", query: { redirect: '/theatre' } });
+                this.$router.replace({ path: "/login", query: { redirect: '/checkout' } });
             } else {
-                // await updateUserPersonalData(this.profile);
                 this.$store.commit("selectedTab", 3);
                 this.$router.replace({ path: "/profile", query: { productName } });
             }
+        },
+        goToCheckOut(productName) {
+            this.$router.replace({ path: "/checkout", query: { productName } });
         }
     },
     buyProduct() {

@@ -1,11 +1,14 @@
 <template>
   <div>
-    <div v-if="basketProducts == ''">
+    <div>
+    <div v-if="basketProducts.length == 0">
       <h1>Your Basket is empty</h1>
     </div>
-    <div v-else v-for="product in basketProducts" :key="product.id">
-      <h1>{{ product }}</h1>
-          <button @click="deleteProduct(product)">X</button>
+    <div v-for="(product, index) in basketProducts" :key="index" v-else>
+      <h1>{{ product.name }}</h1>
+      <b-button @click="deleteProduct(product.name)">X</b-button>
+      <b-button @click="goToCheckOut(product, index)">Buy Product</b-button>
+    </div>
     </div>
   </div>
 </template>
