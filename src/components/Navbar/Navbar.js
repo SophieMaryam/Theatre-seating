@@ -7,23 +7,42 @@ export default Vue.extend({
   data() {
     return {
       searchVisible: false,
-      isAuthenticated: this.checkAuthentication()
+      // isAuthenticated: this.checkAuthentication()
+    }
+  },
+  created(){
+    this.setUserAuthentication();
+    console.log(this.$store.getters.isUserAuthenticated)
+  },
+  computed: {
+    userAuthenticated() {
+      return this.$store.getters.isUserAuthenticated
     }
   },
   methods: {
-    checkAuthentication() { 
+    // checkAuthentication() { 
+    //   const user = firebase.auth().currentUser;
+    //     if(user == null || "") {
+    //       this.$nextTick(() => { 
+    //         this.isAuthenticated == false;
+    //       })
+    //     } else {
+    //       this.$nextTick(() => {   
+    //         this.isAuthenticated = true;
+    //       })
+    //     }
+    // },
+    setUserAuthentication() {
       const user = firebase.auth().currentUser;
-        if(user == null || "") {
-          this.$nextTick(() => { 
-            console.log("@hi")
-            this.isAuthenticated == false;
-          })
-        } else {
-          this.$nextTick(() => {   
-            console.log("bye")  
-            this.isAuthenticated = true;
-          })
-        }
+      if(user == null || "") {
+        this.$nextTick(() => { 
+          this.$store.commit("userAuthenticationStatus", false)
+        })
+      } else {
+        this.$nextTick(() => {   
+          this.$store.commit("userAuthenticationStatus", true)
+        })
+      }
     }
   }
 });
