@@ -9,6 +9,15 @@ firebase.initializeApp(config);
 
 export const db = firebase.firestore();
 
+// export async function getAllUserProfileData() {
+//   const user = firebase.auth().currentUser;
+//   const querySnapshot = await db.collection("profiles").doc(user.uid)
+//   .onSnapshot((querySnapshot) => {
+//     const userProfile = querySnapshot.data();
+//     return userProfile;
+//   })
+// }
+
 export async function getAllUserProfileData() {
   const user = firebase.auth().currentUser;
   const querySnapshot = await db.collection("profiles").doc(user.uid).get()
@@ -38,7 +47,6 @@ export async function updateUserPersonalData(updatedUserData) {
     phoneNumber: updatedUserData.phoneNumber
   })
 }
-
 
 export async function userLogin(email, password, value) {
   firebase.auth().signInWithEmailAndPassword(email, password)
