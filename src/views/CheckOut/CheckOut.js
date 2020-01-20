@@ -2,14 +2,18 @@ import Vue from "vue";
 import firebase from "firebase";
 import { getAllUserProfileData, updateUserPersonalData } from "../../firebase.js";
 import allProductDataJSon from "../../common/productData.json";
+import UserSettings from "../../components/UserSettings/UserSettings.vue";
 
 export default Vue.extend({
     name: "CheckOut",
+    components: {
+        UserSettings
+    },
     data() {
         return {
             loaded: false,
             paidFor: false,
-            productName: this.$route.params.product,
+            productName: this.$route.params.productName,
             allProductData: allProductDataJSon.allProductData,
             profile: {},
             product: {
