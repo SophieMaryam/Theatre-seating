@@ -1,6 +1,5 @@
 import Vue from "vue";
 import firebase from "firebase";
-import { addProductToBasket } from "../../firebase.js";
 import allProductDataJSon from "../../common/productData.json";
 
 export default Vue.extend({
@@ -18,8 +17,18 @@ export default Vue.extend({
             if (localStorage.getItem('products')) {
                 products = JSON.parse(localStorage.getItem('products'));
             }
-            products.push({ name: product.name, image: product.img, price: product.price });
-            localStorage.setItem('products', JSON.stringify(products));
+            // products.push({ name: product.name, image: product.img, price: product.price });
+            // localStorage.setItem('products', JSON.stringify(products));
+            let hello = products.map(name => name.name)
+            const values = hello.forEach( (item) => {
+                if(item == product.name) {
+                    console.log("hi")
+                } else {
+                    products.push({ name: product.name, image: product.img, price: product.price });
+                    localStorage.setItem('products', JSON.stringify(products));
+                }
+              });
+
         },
         goToBasket(productName) {
             const currentUser = firebase.auth().currentUser;
@@ -34,8 +43,5 @@ export default Vue.extend({
         goToCheckOut(productName) {
             this.$router.replace({ path: "/checkout", query: { productName } });
         }
-    },
-    buyProduct() {
-        console.log("purchase page")
     }
 });
