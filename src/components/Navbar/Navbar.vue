@@ -37,7 +37,7 @@
               <template slot="button-content">
                 <font-awesome-icon class="icons" icon="sign-in-alt" />
               </template>
-              <div v-if="!isAuthenticated">
+              <div v-if="!userAuthenticated">
                 <b-dropdown-item class="dropdown">
                   <router-link to="/login" class="link">Login</router-link>
                 </b-dropdown-item>
