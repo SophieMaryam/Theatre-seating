@@ -4,19 +4,22 @@
             "name": "Camera",
             "price": "300",
             "img": "camera.jpeg",
-            "alt": "Camera"
+            "alt": "Camera",
+            "quantity": 0
         },
         {
             "name": "Art",
             "price": "150",
             "img": "art.jpeg",
-            "alt": "Two works of art by Jane Doe"
+            "alt": "Two works of art by Jane Doe",
+            "quantity": 0
         },
         {
             "name": "Butterfly Ornaments",
             "price": "30",
             "img": "butterfly.jpeg",
-            "alt": "Two butterfly ornaments"
+            "alt": "Two butterfly ornaments",
+            "quantity": 0
         }
     ]
 }
