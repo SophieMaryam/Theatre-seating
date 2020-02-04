@@ -7,6 +7,7 @@
     <div v-for="(product, index) in basketProducts" :key="index" v-else>
       <h1>{{ product.name }} {{product.price }}</h1>
       <b-button @click="deleteProduct(product.name)">X</b-button>
+      <!-- <b-button @click="reduceProductAmount(product.name)">Decrease</b-button> -->
       <b-button @click="goToCheckOut(product.name, index)">Buy Product</b-button>
     </div>
     </div>
