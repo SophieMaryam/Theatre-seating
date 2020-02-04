@@ -14,7 +14,6 @@ export default Vue.extend({
     methods: {
         displayBasketProducts() {
             this.basketProducts = JSON.parse(localStorage.getItem('products'));
-            // this.checkForDuplicates()
         },
         deleteProduct(productName) {
             let storageProducts = JSON.parse(localStorage.getItem('products'));
@@ -27,10 +26,6 @@ export default Vue.extend({
                 name: "CheckOut",
                 params: { productName: productName, index: index }
             });
-        },
-        checkForDuplicates() {
-            // var productName = this.basketProducts.map((product) => { return product.name });
-           const unique = this.basketProducts.filter((set => product => !set.has(product.name) && set.add(product.name))(new Set));
         }
     }
 });
