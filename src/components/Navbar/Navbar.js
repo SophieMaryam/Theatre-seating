@@ -12,7 +12,7 @@ export default Vue.extend({
   },
   created(){
     this.setUserAuthentication();
-    console.log(this.$store.getters.isUserAuthenticated)
+    // console.log(this.$store.getters.isUserAuthenticated)
   },
   computed: {
     userAuthenticated() {
@@ -20,14 +20,14 @@ export default Vue.extend({
     }
   },
   methods: {
-    // checkAuthentication() { 
+    // checkAuthentication() {
     //   const user = firebase.auth().currentUser;
     //     if(user == null || "") {
-    //       this.$nextTick(() => { 
+    //       this.$nextTick(() => {
     //         this.isAuthenticated == false;
     //       })
     //     } else {
-    //       this.$nextTick(() => {   
+    //       this.$nextTick(() => {
     //         this.isAuthenticated = true;
     //       })
     //     }
@@ -35,11 +35,11 @@ export default Vue.extend({
     setUserAuthentication() {
       const user = firebase.auth().currentUser;
       if(user == null || "") {
-        this.$nextTick(() => { 
+        this.$nextTick(() => {
           this.$store.commit("userAuthenticationStatus", false)
         })
       } else {
-        this.$nextTick(() => {   
+        this.$nextTick(() => {
           this.$store.commit("userAuthenticationStatus", true)
         })
       }
