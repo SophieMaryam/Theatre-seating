@@ -19,7 +19,7 @@ export default Vue.extend({
           filteredProduct.quantity = Number(filteredProduct.quantity) + 1
           filteredProduct.price = Number(product.price) * Number(filteredProduct.quantity)
       } else {
-        products.push({ name: product.name, price: product.price, quantity: 1});
+        products.push({ name: product.name, price: product.price, quantity: 1, img: product.img});
       }
       return localStorage.setItem("products", JSON.stringify(products));
     },
