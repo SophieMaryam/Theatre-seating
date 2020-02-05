@@ -13,20 +13,13 @@ export default Vue.extend({
   },
   methods: {
     addToBasket(product) {
-      let products = JSON.parse(localStorage.getItem("products"));
+      let products = JSON.parse(localStorage.getItem("products")) || [];
       let filteredProduct = products.find(p => p.name == product.name);
       if (filteredProduct) {
-        Object.assign(filteredProduct, {
-          name: product.name,
-          quantity: Number(filteredProduct.quantity) + 1,
-          price: Number(product.price) * (Number(filteredProduct.quantity) + 1),
-        });
+          filteredProduct.quantity = Number(filteredProduct.quantity) + 1
+          filteredProduct.price = Number(product.price) * Number(filteredProduct.quantity)
       } else {
-        products.push({
-          name: product.name,
-          price: product.price,
-          quantity: 1
-        });
+        products.push({ name: product.name, price: product.price, quantity: 1});
       }
       return localStorage.setItem("products", JSON.stringify(products));
     },
