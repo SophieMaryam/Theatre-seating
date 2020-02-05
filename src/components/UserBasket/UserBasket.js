@@ -5,37 +5,36 @@ export default Vue.extend({
     data() {
         return {
             name: "",
-            basketProducts: []
+            basketProducts: [],
+            localStorageProducts: JSON.parse(localStorage.getItem('products')) || []
         }
     },
     mounted() {
         this.displayBasketProducts();
     },
-        // this.storageProducts = JSON.parse(localStorage.getItem("products"));
-      // let products = this.storageProducts.find(
-      //   product => product.name !== productName
-      // );
-      // if (products.quantity < 1) {
-      //   Object.assign(products, {
-      //     name: products.name,
-      //     quantity: Number(products.quantity) - 1,
-      //     price: Number(products.price) * Number(products.quantity)
-      //   });
-      //   localStorage.setItem("products", JSON.stringify(products));
-      // } else {
-      //   this.deleteProduct(product)
-      // }
-      // this.displayBasketProducts();
     methods: {
         displayBasketProducts() {
-            this.basketProducts = JSON.parse(localStorage.getItem('products'));
-            console.log(this.basketProducts)
+            this.basketProducts = JSON.parse(localStorage.getItem('products')) || [];
         },
         deleteProduct(productName) {
-            // let storageProducts = JSON.parse(localStorage.getItem('products'));
-            // let products = storageProducts.find(product => product.name !== productName);
-            // localStorage.setItem('products', JSON.stringify(products));
-            // this.displayBasketProducts();
+            let product = this.localStorageProducts.findIndex(product => product.name === productName);
+            this.localStorageProducts.splice(product, 1);
+            localStorage.setItem('products', JSON.stringify(this.localStorageProducts));
+            this.displayBasketProducts();
+        },
+        reduceProductAmount(product) {
+          let filteredProduct = this.localStorageProducts.find(p => p.name === product.name);
+          if (filteredProduct && product.quantity > 1) {
+              filteredProduct.quantity = Number(product.quantity) - 1
+              filteredProduct.price = this.productPriceReduction(product);
+              localStorage.setItem("products", JSON.stringify(this.localStorageProducts));
+          } else {
+            this.deleteProduct(product.name)
+          }
+          this.displayBasketProducts();
+        },
+        productPriceReduction(product) {
+          return  Number(product.price) - (Number(product.price) / Number(product.quantity))
         },
         goToCheckOut(productName, index) {
             this.$router.push({
