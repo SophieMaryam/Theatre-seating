@@ -1,13 +1,14 @@
 import Vue from "vue";
 import firebase from "firebase";
 import { getAllUserProfileData, updateUserPersonalData } from "../../firebase.js";
-import allProductDataJSon from "../../common/productData.json";
 import UserSettings from "../../components/UserSettings/UserSettings.vue";
+import PayPal from 'vue-paypal-checkout'
 
 export default Vue.extend({
     name: "CheckOut",
     components: {
-        UserSettings
+        UserSettings,
+        PayPal
     },
     data() {
         return {
@@ -15,52 +16,25 @@ export default Vue.extend({
             paidFor: false,
             productName: this.$route.params.productName,
             profile: {},
-            product: {
-                price: 10
+            isAuthenticated: firebase.auth().currentUser,
+            credentials: {
+              sandbox: 'AYDc1pC2VxkqCLjapMmCNa7t4KjtEY8hkKPnfHEHLy0Q3jEigYx7zOY3QmlzY0re_vG13C2FElpAA28R',
+              production: '<production client id>'
             },
             localStorageProducts: JSON.parse(localStorage.getItem("products")) || [],
-            isAuthenticated: firebase.auth().currentUser
+            totalPriceAsString: ""
         }
     },
     mounted() {
         this.setProfileData();
-        this.listenerForPaypalScript();
+        this.totalCheckOutPrice();
     },
     methods: {
-        listenerForPaypalScript() {
-            const script = document.createElement("script");
-            script.src = "https://www.paypal.com/sdk/js?client-id=AYDc1pC2VxkqCLjapMmCNa7t4KjtEY8hkKPnfHEHLy0Q3jEigYx7zOY3QmlzY0re_vG13C2FElpAA28R";
-            script.addEventListener("load", this.setLoaded);
-            document.body.appendChild(script);
-        },
-        setLoaded() {
-            this.loaded = true;
-            window.paypal
-                .Buttons({
-                    createOrder: (actions) => {
-                        return actions.order.create({
-                            purchase_units: [
-                                {
-                                    description: this.productName,
-                                    amount: {
-                                        currency_code: "EU",
-                                        value: this.products.price
-                                    }
-                                }
-                            ]
-                        });
-                    },
-                    onApprove: async (actions) => {
-                        const order = await actions.order.capture();
-                        this.data;
-                        this.paidFor = true;
-                        console.log(order);
-                    },
-                    onError: err => {
-                        console.log(err);
-                    }
-                })
-                .render(this.$refs.paypal);
+        totalCheckOutPrice() {
+          let productPrices = this.localStorageProducts.map(product => Number(product.price))
+          let sumOfAllPrices = productPrices.reduce((a, b) => a + b, 0)
+          this.totalPriceAsString = sumOfAllPrices.toString()
+          return this.totalPriceAsString
         },
         async setProfileData() {
             this.profile = await getAllUserProfileData();
