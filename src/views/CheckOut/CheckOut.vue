@@ -25,14 +25,14 @@
       </div>
       <div v-if="!paidFor" class="border mb-3">
         <h3 class="text-uppercase">Order Details</h3>
-        <div v-for="(productDetails, index) in allProductData" :key="index">
-          <div v-if="productName == productDetails.name">
-            <img class="image" :src="require(`../../assets/products/${productDetails.img}`)" />
+        <div v-for="product in localStorageProducts" :key="product.id">
+          <div>
+            <img class="image" :src="require(`../../assets/products/${product.img}`)" />
             <div class="text-uppercase">
-              <h6>{{ productDetails.name }}</h6>
-              <h6>EUR {{ productDetails.price }}</h6>
+              <h6>{{ product.name }}</h6>
+              <h6>EUR {{ product.price }}</h6>
               <h6>Postal Costs: 0</h6>
-              <h6>Total: {{ productDetails.price }}</h6>
+              <h6>Total: {{ product.price }}</h6>
             </div>
           </div>
         </div>
@@ -47,4 +47,4 @@ module.exports = require("./CheckOut.js");
 </script>
 
 <style scoped src="./CheckOut.css">
-</style> 
+</style>

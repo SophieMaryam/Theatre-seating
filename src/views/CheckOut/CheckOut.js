@@ -14,18 +14,17 @@ export default Vue.extend({
             loaded: false,
             paidFor: false,
             productName: this.$route.params.productName,
-            allProductData: allProductDataJSon.allProductData,
             profile: {},
             product: {
                 price: 10
             },
+            localStorageProducts: JSON.parse(localStorage.getItem("products")) || [],
             isAuthenticated: firebase.auth().currentUser
         }
     },
     mounted() {
         this.setProfileData();
         this.listenerForPaypalScript();
-       
     },
     methods: {
         listenerForPaypalScript() {
