@@ -17,8 +17,8 @@ export default Vue.extend({
             this.basketProducts = JSON.parse(localStorage.getItem('products')) || [];
         },
         deleteProduct(productName) {
-            let product = this.localStorageProducts.findIndex(product => product.name === productName);
-            this.localStorageProducts.splice(product, 1);
+            let selectedProduct = this.localStorageProducts.findIndex(product => product.name === productName);
+            this.localStorageProducts.splice(selectedProduct, 1);
             localStorage.setItem('products', JSON.stringify(this.localStorageProducts));
             this.displayBasketProducts();
         },
