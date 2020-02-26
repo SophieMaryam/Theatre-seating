@@ -1,9 +1,8 @@
 import Vue from "vue";
-import firebase from "firebase";
 import UserProfileDetails from "../../components/UserProfileDetails/UserProfileDetails.vue";
 import UserSettings from "../../components/UserSettings/UserSettings.vue";
 import UserBasket from "../../components/UserBasket/UserBasket.vue";
-import { deleteUserAccount } from "../../firebase.js"
+import { deleteUserAccount, userLogout } from "../../firebase.js"
 
 export default Vue.extend({
   name: "ProfilePage",
@@ -23,15 +22,11 @@ export default Vue.extend({
     }
   },
   methods: {
-    logoutUser() {
-      firebase.auth().signOut()
-        .then(() => {
-          this.$router.replace("login")
-        })
-        .catch(err => console.log(err));
+    async userLogout() {
+      await userLogout()
     },
     async deleteAccount() {
-      if (confirm("Are you sure?")) {
+      if (confirm("Are you sure you want to delete your account?")) {
         await deleteUserAccount();
       } else {
         console.error()

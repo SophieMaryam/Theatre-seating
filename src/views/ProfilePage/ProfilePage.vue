@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button @click="logoutUser">Sign Out</button>
+    <button @click="userLogout">Sign Out</button>
     <button @click="deleteAccount">Delete Your Account</button>
     <b-tabs content-class="mt-3" v-model="tabIndex">
       <b-tab title="Profile">
@@ -20,7 +20,7 @@
 </template>
 
 <style scoped src="./ProfilePage.css">
-</style> 
+</style>
 
 <script>
 module.exports = require("./ProfilePage.js");
