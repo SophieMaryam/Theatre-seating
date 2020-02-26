@@ -16,8 +16,8 @@ export default  Vue.extend({
   },
   methods: {
     async login() {
-      const value = this.$route.query.redirect;
-      await userLogin(this.email, this.password, value)
+      const queryRedirect = this.$route.query.redirect;
+      await userLogin(this.email, this.password, queryRedirect)
     },
     socialLoginIn() {
       const provider = new firebase.auth.GoogleAuthProvider();
