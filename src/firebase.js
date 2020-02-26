@@ -116,7 +116,7 @@ export async function userRegistration(email, password, fullName) {
 export async function userLogout() {
   firebase.auth().signOut()
   .then(() => {
-    this.$router.replace("login")
+    router.replace("login")
   })
   .catch(err => console.log(err));
 }
