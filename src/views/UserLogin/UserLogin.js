@@ -17,6 +17,7 @@ export default Vue.extend({
     async userLogin() {
       const queryRedirect = this.$route.query.redirect;
       await userLogin(this.email, this.password, queryRedirect)
+      this.$store.commit("selectedTab", 0)
     }
   }
 });
