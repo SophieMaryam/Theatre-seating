@@ -1,11 +1,12 @@
 import Vue from "vue";
+import { userGoogleLogin } from "../../firebase.js";
 
-export default {
+export default Vue.extend({
   name: "LoginSocialMedia",
-  // props: {
-  //   onClick: {
-  //     type: Function,
-  //     required: false
-  //   }
-  // }
-}
+  methods: {
+    async userGoogleLogin() {
+      const queryRedirect = this.$route.query.redirect;
+      await userGoogleLogin(queryRedirect)
+    }
+  }
+})
