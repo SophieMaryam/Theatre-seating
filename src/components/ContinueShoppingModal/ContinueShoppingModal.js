@@ -26,7 +26,7 @@ export default Vue.extend({
     goToBasket(productName) {
       const currentUser = firebase.auth().currentUser;
       if (!currentUser) {
-        // Incomplete: This stills need to query theatre/indx & show name
+        // Incomplete: This stills need to query product
         this.$router.replace({
           path: "/login",
           query: { redirect: "/checkout" }

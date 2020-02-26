@@ -21,7 +21,6 @@ export default  Vue.extend({
     },
     socialLoginIn() {
       const provider = new firebase.auth.GoogleAuthProvider();
-
       firebase.auth().signInWithPopup(provider)
       .then(() => {
         this.$router.push(this.$route.query.redirect || '/profile')

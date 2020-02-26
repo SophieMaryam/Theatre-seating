@@ -3,7 +3,7 @@ import App from "./App.vue";
 import Vuex from "vuex";
 import firebase from "firebase";
 import { router } from "./router/routes";
-import { store } from "./store/store";
+import { store } from "./store/store.js";
 import BootstrapVue from "bootstrap-vue";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
