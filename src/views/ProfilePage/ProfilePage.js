@@ -23,7 +23,7 @@ export default Vue.extend({
   },
   methods: {
     async userLogout() {
-      await userLogout()
+      await userLogout();
     },
     async deleteAccount() {
       if (confirm("Are you sure you want to delete your account?")) {
