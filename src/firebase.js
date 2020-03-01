@@ -95,6 +95,8 @@ export async function userRegistration(email, password, fullName) {
           address: "",
           postalCode: "",
           household: "",
+          city: "",
+          country: "",
           phoneNumber: "",
           tickets: [
             {

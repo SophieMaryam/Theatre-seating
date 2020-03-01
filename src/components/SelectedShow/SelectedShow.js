@@ -20,7 +20,7 @@ export default Vue.extend({
       const currentUser = firebase.auth().currentUser;
       if(!currentUser) {
         // Incomplete: This stills need to query theatre/indx & show name
-        this.$router.replace({path: "/login", query: { redirect: '/theatre'} });
+        this.$router.replace({path: "/login", query: { redirect: '/theatre' }});
       } else {
         this.$router.replace({path: "/theatre" , query: {indx, show} });
       }
