@@ -1,10 +1,10 @@
 <template>
   <div>
     <div>
-      <div v-if="basketProducts.length === 0">
+      <div v-if="localStorageProducts.length === 0">
         <h1>Your Basket is empty</h1>
       </div>
-      <div v-for="(product, index) in basketProducts" :key="index" v-else>
+      <div v-else v-for="(product, index) in localStorageProducts" :key="index">
         <div
           class="selected-product-img "
           :style="{
@@ -15,6 +15,7 @@
         <h1>{{ product.name }} {{ product.price }}</h1>
         <b-button @click="deleteProduct(product.name)">X</b-button>
         <b-button @click="decrementProductCount(product)">Decrease</b-button>
+        <b-button @click="incrementProductCount(product)">Increase</b-button>
         <b-button @click="goToCheckOut(product.name, index)">Buy Product</b-button>
       </div>
     </div>
