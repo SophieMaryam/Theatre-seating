@@ -16,7 +16,7 @@ export default Vue.extend({
     }
   },
   methods: {
-    buyTicketForSelectedShow(indx, show) {
+    purchaseTicket(indx, show) {
       const currentUser = firebase.auth().currentUser;
       if(!currentUser) {
         // Incomplete: This stills need to query theatre/indx & show name

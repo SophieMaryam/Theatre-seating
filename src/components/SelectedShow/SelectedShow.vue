@@ -37,7 +37,7 @@
                   <td>{{showDetails.time}}</td>
                   <td>{{showDetails.cost}}</td>
                   <td>
-                    <button @click="buyTicketForSelectedShow(showDetails.id, showName)">Buy Ticket</button>
+                    <button @click="purchaseTicket(showDetails.id, showName)">Buy Ticket</button>
                   </td>
                 </tr>
               </tbody>
