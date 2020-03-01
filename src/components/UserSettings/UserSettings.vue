@@ -42,7 +42,7 @@
                 <div class="form-group col-md-4">
                   <label for="mobile">Mobile</label>
                   <input
-                    type="number"
+                    type="text"
                     v-model="profile.mobile"
                     class="form-control"
                     id="mobile"
