@@ -10,30 +10,30 @@ export default Vue.extend({
         }
     },
     mounted() {
-        this.displayBasketProducts();
+        this.getBasketProducts();
     },
     methods: {
-        displayBasketProducts() {
+        getBasketProducts() {
             this.basketProducts = JSON.parse(localStorage.getItem('products')) || [];
         },
         deleteProduct(productName) {
             let selectedProduct = this.localStorageProducts.findIndex(product => product.name === productName);
             this.localStorageProducts.splice(selectedProduct, 1);
             localStorage.setItem('products', JSON.stringify(this.localStorageProducts));
-            this.displayBasketProducts();
+            this.getBasketProducts();
         },
-        reduceProductAmount(product) {
+        decrementProductCount(product) {
           let filteredProduct = this.localStorageProducts.find(p => p.name === product.name);
           if (filteredProduct && product.quantity > 1) {
               filteredProduct.quantity = Number(product.quantity) - 1
-              filteredProduct.price = this.productPriceReduction(product);
+              filteredProduct.price = this.reduceProductPrice(product);
               localStorage.setItem("products", JSON.stringify(this.localStorageProducts));
           } else {
             this.deleteProduct(product.name)
           }
-          this.displayBasketProducts();
+          this.getBasketProducts();
         },
-        productPriceReduction(product) {
+        reduceProductPrice(product) {
           return  Number(product.price) - (Number(product.price) / Number(product.quantity))
         },
         goToCheckOut(productName, index) {
