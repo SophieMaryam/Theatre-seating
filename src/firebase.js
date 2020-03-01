@@ -56,7 +56,7 @@ export async function updateUserPersonalData(updatedUserData) {
       name: updatedUserData.name,
       address: updatedUserData.address,
       postalCode: updatedUserData.postalCode,
-      phoneNumber: updatedUserData.phoneNumber
+      mobile: updatedUserData.mobile
     });
 }
 
@@ -97,7 +97,7 @@ export async function userRegistration(email, password, fullName) {
           household: "",
           city: "",
           country: "",
-          phoneNumber: "",
+          mobile: "",
           tickets: [
             {
               show: "",

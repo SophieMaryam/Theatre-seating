@@ -11,7 +11,7 @@
       <div>
         <h3>Personal Details</h3>
         <p>Address: {{ allData.address }} {{ allData.postalCode }}</p>
-        <p>Phone Number: {{ allData.phoneNumber }}</p>
+        <p>Phone Number: {{ allData.mobile }}</p>
       </div>
     </div>
   </div>
