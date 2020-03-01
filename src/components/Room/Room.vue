@@ -2,7 +2,7 @@
   <div>
     <div>
       {{ name }}
-      <Row v-for="row in rows" 
+      <Row v-for="row in rows"
       v-bind:key="row.row"
       :row="row.row"
       :seats="row.seats"
