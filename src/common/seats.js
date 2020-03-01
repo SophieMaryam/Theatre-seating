@@ -11,7 +11,8 @@ var layout = {
             { seat: "3", rank: "rank1" },
             { seat: "4", rank: "rank1" },
             { seat: "2", rank: "rank1" }
-          ]
+          ],
+          price: "45"
         },
         {
           row: "2",
@@ -22,7 +23,8 @@ var layout = {
             { seat: "6", rank: "rank1" },
             { seat: "4", rank: "rank1" },
             { seat: "2", rank: "rank1" }
-          ]
+          ],
+          price: "45"
         },
         {
           row: "3",
@@ -33,7 +35,8 @@ var layout = {
             { seat: "6", rank: "rank2" },
             { seat: "4", rank: "rank2" },
             { seat: "2", rank: "rank2" }
-          ]
+          ],
+          price: "35"
         }
       ]
     },
@@ -47,7 +50,8 @@ var layout = {
           { seat: "4", rank: "rank1" },
           { seat: "2", rank: "rank1" }
         ]
-      }]
+      }],
+      price: "45"
     },
     {
       name: "2nd balcony",
@@ -59,7 +63,8 @@ var layout = {
           { seat: "4", rank: "rank2" },
           { seat: "2", rank: "rank2" }
         ]
-      }]
+      }],
+      price: "45"
     },
     {
       name: "3rd balcony",
@@ -71,7 +76,8 @@ var layout = {
           { seat: "4", rank: "rank1" },
           { seat: "2", rank: "rank1" }
         ]
-      }]
+      }],
+      price: "25"
     }
   ]
 }
