@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="pb-2">
-        <div class="card-body background d-flex mb-2 h-100" v-for="(show, index) in filteredShowList()" :key="index">
+        <div class="card-body background d-flex mb-2 h-100" v-for="(show, index) in filteredShowListings()" :key="index">
           <div class="image">
             <img class="image" :src="require(`../../assets/${show.img}`)" />
           </div>
@@ -26,7 +26,7 @@
             </p>
           </div>
           <div class="text-uppercase ml-2">
-            <b-button @click="selectedShow(show, index)" class="btn text-black mt-2 text-uppercase font-weight-bold">Order Tickets</b-button>
+            <b-button @click="goToSelectedShow(show, index)" class="btn text-black mt-2 text-uppercase font-weight-bold">Order Tickets</b-button>
             <b-button class="btn text-black mt-2 text-uppercase font-weight-bold">More info</b-button>
           </div>
         </div>

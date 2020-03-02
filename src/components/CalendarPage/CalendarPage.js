@@ -10,12 +10,12 @@ export default Vue.extend({
     }
   },
   methods: {
-    filteredShowList() {
+    filteredShowListings() {
       return this.allAvailableShowsData.filter(show => {
         return show.title.toLowerCase().includes(this.search.toLowerCase())
       })
     },
-    selectedShow(show, index) {
+    goToSelectedShow(show, index) {
       this.$router.push({
         name: "SelectedShow",
         params: { title: show.title, index: index}
