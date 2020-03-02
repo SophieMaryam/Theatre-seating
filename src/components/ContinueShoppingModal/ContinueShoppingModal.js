@@ -25,15 +25,14 @@ export default Vue.extend({
     },
     goToBasket(productName) {
       const currentUser = firebase.auth().currentUser;
+      this.$store.commit("selectedTab", 3);
       if (!currentUser) {
-        // Incomplete: This stills need to query product
         this.$router.replace({
           path: "/login",
-          query: { redirect: "/checkout" }
+          query: { redirect: "/profile"}
         });
       } else {
-        this.$store.commit("selectedTab", 3);
-        this.$router.replace({ path: "/profile", query: { productName } });
+        this.$router.replace({ path: "/profile"});
       }
     },
     goToCheckOut(productName) {
