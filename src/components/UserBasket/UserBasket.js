@@ -4,7 +4,6 @@ export default Vue.extend({
     name: "UserBasket",
     data() {
         return {
-            storageBasketProducts: [],
             hasDuplicates: null,
             localStorageProducts: JSON.parse(localStorage.getItem('products')) || []
         }
@@ -14,7 +13,7 @@ export default Vue.extend({
     },
     methods: {
         getBasketProducts() {
-          this.storageBasketProducts = JSON.parse(localStorage.getItem('products')) || [];
+          return this.localStorageProducts
         },
         deleteProduct(productName) {
             let selectedProduct = this.localStorageProducts.findIndex(prod => prod.name === productName);
@@ -23,8 +22,8 @@ export default Vue.extend({
             this.getBasketProducts();
         },
         decrementProductCount(product) {
-          let filterProductDuplicates = this.localStorageProducts.find(p => p.name === product.name);
-          if (filterProductDuplicates && product.quantity > 1) {
+          let findProductDuplicates = this.localStorageProducts.find(p => p.name === product.name);
+          if (findProductDuplicates && product.quantity > 1) {
             filterProductDuplicates.price = this.reduceProductPrice(product);
             filterProductDuplicates.quantity = Number(product.quantity) - 1;
               localStorage.setItem("products", JSON.stringify(this.localStorageProducts));
