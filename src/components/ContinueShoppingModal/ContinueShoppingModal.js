@@ -13,15 +13,15 @@ export default Vue.extend({
   },
   methods: {
     addToBasket(product) {
-      let products = JSON.parse(localStorage.getItem("products")) || [];
-      let filteredProduct = products.find(p => p.name == product.name);
-      if (filteredProduct) {
-          filteredProduct.quantity = Number(filteredProduct.quantity) + 1
-          filteredProduct.price = Number(product.price) * Number(filteredProduct.quantity)
+      let localStorageProducts = JSON.parse(localStorage.getItem("products")) || [];
+      let findProductDuplicate = localStorageProducts.find(p => p.name == product.name);
+      if (findProductDuplicate) {
+          findProductDuplicate.quantity = Number(findProductDuplicate.quantity) + 1
+          findProductDuplicate.price = Number(product.price) * Number(findProductDuplicate.quantity)
       } else {
-        products.push({ name: product.name, price: product.price, quantity: 1, img: product.img});
+        localStorageProducts.push({ name: product.name, price: product.price, quantity: 1, img: product.img});
       }
-      return localStorage.setItem("products", JSON.stringify(products));
+      return localStorage.setItem("products", JSON.stringify(localStorageProducts));
     },
     goToBasket(productName) {
       const currentUser = firebase.auth().currentUser;

@@ -24,8 +24,8 @@ export default Vue.extend({
         decrementProductCount(product) {
           let findProductDuplicates = this.localStorageProducts.find(p => p.name === product.name);
           if (findProductDuplicates && product.quantity > 1) {
-            filterProductDuplicates.price = this.reduceProductPrice(product);
-            filterProductDuplicates.quantity = Number(product.quantity) - 1;
+            findProductDuplicates.price = this.reduceProductPrice(product);
+            findProductDuplicates.quantity = Number(product.quantity) - 1;
               localStorage.setItem("products", JSON.stringify(this.localStorageProducts));
           } else {
             this.deleteProduct(product.name)
